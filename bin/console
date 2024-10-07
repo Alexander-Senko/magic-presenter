@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+ENV['RAILS_ENV'] ||= 'development' # Combustion defaults to `test`
+
+require 'bundler/setup'
+require 'combustion'
+require 'magic/presenter'
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+Combustion.initialize! *%i[
+		active_record
+		action_controller
+		action_view
+], **{
+		database_reset: false,
+		load_schema:    false,
+}
+
+require 'irb'
+IRB.start(__FILE__)

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  pull_request:
+    paths:
+      - '!*.md'
+      - '!*.txt'
+
+  push:
+    branches: [ main ]
+    tags:
+      - '!*' # none
+    paths:
+      - lib/*
+      - app/*
+      - config/*
+      - spec/*
+      - Gemfile*
+      - '*.gemspec'
+      - .github/workflows/ci.yml
+
+jobs:
+  lint:
+    name: Ruby ${{ matrix.ruby }}
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby:
+          - head
+          - 3.3
+          - 3.2
+
+          - truffleruby
+          - truffleruby-head
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - uses: paambaati/codeclimate-action@v8
+        env:
+          CC_TEST_REPORTER_ID: # TODO
+        with:
+          coverageCommand: bundle exec rake
+
+      - name: Lint code for consistent style
+        run: bin/rubocop -f github
+
+

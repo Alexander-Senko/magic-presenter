@@ -1,0 +1,10 @@
+/.bundle/
+/doc/
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/coverage/
+/tmp/
+
+/.rubocop-*
+/Gemfile.lock
