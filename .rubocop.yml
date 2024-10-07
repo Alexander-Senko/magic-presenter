@@ -1,0 +1,6 @@
+inherit_from: https://github.com/Alexander-Senko/Alexander-Senko/raw/refs/heads/main/.rubocop.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
