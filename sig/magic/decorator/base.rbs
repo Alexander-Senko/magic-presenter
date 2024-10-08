@@ -1,0 +1,7 @@
+module Magic
+	module Presenter
+		class Base
+			extend Lookup
+		end
+	end
+end

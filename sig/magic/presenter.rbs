@@ -3,6 +3,7 @@ module Magic
 		VERSION: String
 		AUTHORS: Array[Gem::Author]
 
-		# See the writing guide of rbs: https://github.com/ruby/rbs#guides
+		def for:      (Class)  -> Class?
+		def name_for: (Module) -> String
 	end
 end

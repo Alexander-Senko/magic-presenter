@@ -21,7 +21,39 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+`Magic::Presenter::Base` is a basic presenter class to be inherited by any other presenter.
+It further inherits from [`SimpleDelegator`](
+	https://docs.ruby-lang.org/en/master/SimpleDelegator.html
+).
+
+```ruby
+class PersonPresenter < Magic::Presenter::Base
+  def name = "#{first_name} #{last_name}"
+end
+
+class Person
+  include ActiveModel::Model
+  attr_accessor :first_name, :last_name
+end
+
+person = Person.new(first_name: 'John', last_name: 'Smith').decorate
+person.name # => "John Smith"
+```
+
+## Magic
+
+It’s based on [Magic Decorator](
+	https://github.com/Alexander-Senko/magic-decorator#magic
+), so get familiar with that one as well.
+
+### Presenter class inference
+
+Presenters provide automatic class inference for any model based on its class name powered by [Magic Lookup](
+	https://github.com/Alexander-Senko/magic-lookup
+).
+
+For example, `MyNamespace::MyModel.new.decorate` looks for `MyNamespace::MyModelPresenter` first.
+When missing, it further looks for decorators for its ancestor classes, up to `ObjectPresenter`.
 
 ## Development
 

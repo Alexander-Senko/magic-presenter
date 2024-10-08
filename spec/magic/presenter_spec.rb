@@ -2,8 +2,14 @@
 
 module Magic
 	RSpec.describe Presenter do
-		it 'has a version number' do
-			expect(described_class::VERSION).to be_a String
+		describe '.for', :method do
+			it_behaves_like :delegated,
+					to: Presenter::Base, with: Array
+		end
+
+		describe '.name_for', :method do
+			it_behaves_like :delegated,
+					to: Presenter::Base, with: Array
 		end
 	end
 end
