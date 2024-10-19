@@ -68,7 +68,7 @@ See the help for more info:
 
 	$ bin/rails generate presenter --help
 
-## Magic
+## 🧙 Magic
 
 It’s based on [Magic Decorator](
 	https://github.com/Alexander-Senko/magic-decorator#magic
