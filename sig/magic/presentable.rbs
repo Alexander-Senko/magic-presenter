@@ -1,0 +1,9 @@
+module Magic
+	module Presentable
+		include Decoratable
+
+		def decorate:  ->  Presenter?
+		def decorate!: ->  Presenter
+		def decorated: -> (Presenter | self)
+	end
+end

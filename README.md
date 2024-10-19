@@ -40,11 +40,25 @@ person = Person.new(first_name: 'John', last_name: 'Smith').decorate
 person.name # => "John Smith"
 ```
 
+### `Magic::Presentable`
+
+This module includes `Magic::Decoratable` and allows a descendant to be decorated by presenters only.
+Presenter class is being inferred automatically.
+When no presenter is found,
+- `#decorate`  returns `nil`,
+- `#decorate!` raises `Magic::Lookup::Error`,
+- `#decorated` returns the original object.
+
 ## Magic
 
 It’s based on [Magic Decorator](
 	https://github.com/Alexander-Senko/magic-decorator#magic
 ), so get familiar with that one as well.
+
+### Presentable scope
+
+`Magic::Presentable` is mixed into `ActiveModel::Model` by default.
+It means that any model, be it `ActiveRecord::Base`, `Mongoid::Document` or whatever else, is _magically presentable_.
 
 ### Presenter class inference
 
