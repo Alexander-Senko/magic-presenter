@@ -51,6 +51,16 @@ When no presenter is found,
 - `#decorate!` raises `Magic::Lookup::Error`,
 - `#decorated` returns the original object.
 
+### Generators
+
+A generator can be used to generate a presenter:
+
+	$ bin/rails generate presenter Person
+
+See the help for more info:
+
+	$ bin/rails generate presenter --help
+
 ## Magic
 
 It’s based on [Magic Decorator](

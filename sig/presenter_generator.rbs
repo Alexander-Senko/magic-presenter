@@ -1,0 +1,7 @@
+class PresenterGenerator
+	PATH: Pathname
+
+	private
+
+	def parent_class_name: () -> String
+end

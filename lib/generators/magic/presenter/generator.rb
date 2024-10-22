@@ -3,6 +3,8 @@
 module Magic
 	module Presenter
 		module Generator # :nodoc:
+			require 'generators/presenter/presenter_generator'
+
 			private
 
 			def file_name name = super()
@@ -15,6 +17,8 @@ module Magic
 			def file_path path = super(), root: target_root
 				root / 'presenters' / path
 			end
+
+			def presenter_path(*) = file_path(*, root: PresenterGenerator.target_root)
 		end
 	end
 end

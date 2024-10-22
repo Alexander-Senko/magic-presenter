@@ -3,6 +3,8 @@
 ### Added
 
 - Enhanced presenter naming rules.
+- Generators:
+	- `presenter`
 
 ### Fixed
 

@@ -1,0 +1,5 @@
+<% module_namespacing do -%>
+class <%= class_name %> < <%= parent_class_name %>
+  # Define presentation-specific methods here.
+end
+<% end -%>
