@@ -17,6 +17,8 @@ module Magic
 		# If not found, it looks for presenters of its ancestor classes,
 		# up to `ObjectPresenter`.
 		class Base < Decorator::Base
+			include GlobalID if defined? ::GlobalID
+
 			class << self
 				def name_for object_class
 					object_class

@@ -11,6 +11,7 @@ module Magic # :nodoc:
 	# Presentation layer for Rails models
 	module Presenter
 		autoload :Base,      'magic/presenter/base'
+		autoload :GlobalID,  'magic/presenter/global_id'
 		autoload :Generator, 'generators/magic/presenter/generator'
 
 		module_function
