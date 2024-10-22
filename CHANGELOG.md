@@ -6,6 +6,7 @@
 - Generators:
 	- `magic:presenter:install`
 	- `presenter`
+		- Test::Unit
 
 ### Fixed
 

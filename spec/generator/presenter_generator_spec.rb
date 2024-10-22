@@ -2,6 +2,8 @@
 
 require 'generators/presenter/presenter_generator'
 
+$LOAD_PATH << Rails.application.root.join('test').to_s
+
 RSpec.describe PresenterGenerator do
 	let(:name)           { self.class.description }
 	let(:presenter_name) { Magic::Presenter.name_for name }
@@ -25,6 +27,28 @@ RSpec.describe PresenterGenerator do
 
 		it { is_expected.to have_attributes name: presenter_name }
 		it { is_expected.to be < ApplicationPresenter }
+
+		describe 'tests' do
+			subject { file path }
+
+			shared_examples 'generates a valid file' do
+				it { is_expected.to exist }
+				it { is_expected.to have_correct_syntax }
+			end
+
+			context 'with TestUnit' do
+				let(:options) { { test_framework: :test_unit } }
+				let(:path)    { "test/presenters/#{presenter_name.underscore}_test.rb" }
+
+				include_examples 'generates a valid file'
+
+				describe 'generated test' do
+					subject { "#{presenter_name}Test".safe_constantize }
+
+					it { is_expected.to be < ActiveSupport::TestCase }
+				end
+			end
+		end
 	end
 
 	describe 'Person' do

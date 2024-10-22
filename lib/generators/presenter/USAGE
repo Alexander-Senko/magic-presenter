@@ -2,6 +2,9 @@ Description:
     Generates a new presenter for a model. Pass the model name, either
     CamelCased or under_scored, as an argument.
 
+    This generator invokes your configured test framework, which
+    defaults to TestUnit.
+
     If a `--parent` option is given, it’s used as a superclass of the
     created presenter.
 
@@ -10,8 +13,12 @@ Example:
 
     This will create:
         Presenter:  app/presenters/account_presenter.rb
+      for TestUnit:
+        Test:       test/presenters/account_presenter_test.rb
 
     bin/rails generate presenter admin/account
 
     This will create:
         Presenter:  app/presenters/admin/account_presenter.rb
+      for TestUnit:
+        Test:       test/presenters/admin/account_presenter_test.rb
