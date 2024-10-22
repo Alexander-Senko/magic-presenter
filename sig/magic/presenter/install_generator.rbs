@@ -1,0 +1,9 @@
+module Magic
+	module Presenter
+		class InstallGenerator
+			private
+
+			def namespaced_file_name: (String) -> String
+		end
+	end
+end

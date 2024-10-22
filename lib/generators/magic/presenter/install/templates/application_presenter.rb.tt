@@ -1,0 +1,6 @@
+<% module_namespacing do -%>
+class ApplicationPresenter < Magic::Presenter::Base
+  # Define presentation-specific methods here.
+  # They are shared by all the descendant presenters.
+end
+<% end -%>

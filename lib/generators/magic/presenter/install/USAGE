@@ -1,0 +1,10 @@
+Description:
+    Generates application files used by Magic Presenter:
+        ApplicationPresenter:   a base class for other presenters to
+                                inherit from.
+
+Example:
+    bin/rails generate magic:presenter:install
+
+    This will create:
+        ApplicationPresenter:   app/presenters/application_presenter.rb

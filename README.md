@@ -21,6 +21,10 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 	$ gem install magic-presenter
 
+After all the gems are `bundle`d run the installer in the project directory to generate the necessary files:
+
+	$ bin/rails generate magic:presenter:install
+
 ## Usage
 
 `Magic::Presenter::Base` is a basic presenter class to be inherited by any other presenter.

@@ -4,6 +4,7 @@
 
 - Enhanced presenter naming rules.
 - Generators:
+	- `magic:presenter:install`
 	- `presenter`
 
 ### Fixed
