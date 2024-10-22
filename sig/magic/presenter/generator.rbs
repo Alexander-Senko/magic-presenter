@@ -1,0 +1,10 @@
+module Magic
+	module Presenter
+		module Generator
+			private
+
+			def file_name: (?String name)                  -> String
+			def file_path: (?String path, ?root: Pathname) -> Pathname
+		end
+	end
+end
