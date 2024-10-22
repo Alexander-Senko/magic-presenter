@@ -4,3 +4,7 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-rspec_rails
+
+AllCops:
+  Exclude:
+    - 'spec/internal/tmp/**/*'
