@@ -7,6 +7,7 @@
 	- `magic:presenter:install`
 	- `presenter`
 		- Test::Unit
+		- RSpec
 
 ### Fixed
 

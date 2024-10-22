@@ -48,6 +48,26 @@ RSpec.describe PresenterGenerator do
 					it { is_expected.to be < ActiveSupport::TestCase }
 				end
 			end
+
+			context 'with RSpec' do
+				let(:options) { { test_framework: :rspec } }
+
+				let :path do
+					load file super() # the presenter should be defined before loading the spec
+
+					"spec/presenters/#{presenter_name.underscore}_spec.rb"
+				end
+
+				include_examples 'generates a valid file'
+
+				describe 'generated spec' do
+					subject { "RSpec::ExampleGroups::#{presenter_name.delete '::'}_3".safe_constantize } # HACK: name heuristics
+
+					it { is_expected.to be < RSpec::Core::ExampleGroup }
+					it { is_expected.to be < PresenterExampleGroup }
+					it { is_expected.to have_attributes metadata: include(type: :presenter) }
+				end
+			end
 		end
 	end
 

@@ -3,7 +3,7 @@ Description:
     CamelCased or under_scored, as an argument.
 
     This generator invokes your configured test framework, which
-    defaults to TestUnit.
+    defaults to TestUnit. It supports both TestUnit and RSpec.
 
     If a `--parent` option is given, it’s used as a superclass of the
     created presenter.
@@ -15,6 +15,8 @@ Example:
         Presenter:  app/presenters/account_presenter.rb
       for TestUnit:
         Test:       test/presenters/account_presenter_test.rb
+      for RSpec:
+        Spec:       spec/presenters/account_presenter_spec.rb
 
     bin/rails generate presenter admin/account
 
@@ -22,3 +24,5 @@ Example:
         Presenter:  app/presenters/admin/account_presenter.rb
       for TestUnit:
         Test:       test/presenters/admin/account_presenter_test.rb
+      for RSpec:
+        Spec:       spec/presenters/admin/account_presenter_spec.rb
