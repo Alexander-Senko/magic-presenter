@@ -9,6 +9,6 @@ module Magic
 
 		private
 
-		def decorator = Presenter.for self.class
+		def decorator_base = Presenter
 	end
 end

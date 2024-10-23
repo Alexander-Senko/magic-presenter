@@ -43,6 +43,8 @@ module Magic
 		describe '#decorate!', :method do
 			it_behaves_like :model do
 				it { expect { subject[] }.to raise_error Lookup::Error }
+				it { expect { subject[] }.to raise_error /no Magic::Presenter found/ }
+				it { expect { subject[] }.to raise_error /default name is #{object.class}Presenter/ }
 
 				it_behaves_like 'with a matching presenter' do
 					include_examples 'returns the object decorated by a presenter'
