@@ -68,8 +68,23 @@ Presenters provide automatic class inference for any model based on its class na
 	https://github.com/Alexander-Senko/magic-lookup
 ).
 
-For example, `MyNamespace::MyModel.new.decorate` looks for `MyNamespace::MyModelPresenter` first.
+For example, `MyNamespace::MyModel.new.decorate` looks for `MyNamespace::MyPresenter` first.
 When missing, it further looks for decorators for its ancestor classes, up to `ObjectPresenter`.
+
+#### Mapping rules
+
+- `MyObject` → `MyObjectPresenter`
+- `MyModel`  → `MyPresenter`
+- `MyRecord` → `MyPresenter`
+
+> [!TIP]
+> That’s why `ApplicationPresenter` presents `ApplicationRecord`  alongside all its descendants automagically with no extra code.
+
+When in doubt, one can use `Magic::Presenter.name_for`:
+
+```ruby
+Magic::Presenter.name_for Person # => "PersonPresenter"
+```
 
 ## Development
 
