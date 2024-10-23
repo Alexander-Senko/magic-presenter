@@ -8,15 +8,13 @@ module Magic
 
 		def presenter_class = Class.new Presenter::Base
 
-		before do # HACK: decorators persist across examples somehow otherwise
-			stub_const 'Magic::Presenter::Base', Class.new(Presenter::Base)
+		after do
+			Presenter::Base.clear_memery_cache!
+			GC.start # purge removed classes
 		end
 
-		before { stub_const 'ArrayDecorator', Class.new(Decorator::Base) }
-		after  { Presenter::Base.clear_memery_cache! }
-
 		shared_context :model do
-			before { object.extend ActiveModel::Model }
+			before { object.singleton_class.include ActiveModel::Model }
 		end
 
 		shared_context 'with a matching presenter' do
@@ -40,11 +38,15 @@ module Magic
 			its([]) { is_expected.not_to be_a Presenter::Base }
 		end
 
+		shared_examples 'fails to find a presenter' do
+			it { expect { subject[] }.to raise_error Lookup::Error }
+			it { expect { subject[] }.to raise_error /no Magic::Presenter found/ }
+			it { expect { subject[] }.to raise_error /default name is #{object.class}Presenter/ }
+		end
+
 		describe '#decorate!', :method do
 			it_behaves_like :model do
-				it { expect { subject[] }.to raise_error Lookup::Error }
-				it { expect { subject[] }.to raise_error /no Magic::Presenter found/ }
-				it { expect { subject[] }.to raise_error /default name is #{object.class}Presenter/ }
+				include_examples 'fails to find a presenter'
 
 				it_behaves_like 'with a matching presenter' do
 					include_examples 'returns the object decorated by a presenter'
@@ -55,6 +57,28 @@ module Magic
 
 			it_behaves_like 'with a matching presenter' do
 				include_examples 'returns the object decorated by a non-presenter'
+			end
+
+			context 'with Active Record' do
+				let(:object) { model_class.new }
+
+				context 'when the class has an explicit presenter' do
+					let(:model_class) { Person }
+
+					include_examples 'returns the object decorated by a presenter'
+				end
+
+				context 'with ApplicationPresenter' do
+					let(:model_class) { User }
+
+					include_examples 'returns the object decorated by a presenter'
+				end
+
+				context 'without presenters defined' do
+					let(:model_class) { SchemaMigration }
+
+					include_examples 'fails to find a presenter'
+				end
 			end
 		end
 	end

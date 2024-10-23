@@ -59,7 +59,7 @@ It’s based on [Magic Decorator](
 
 ### Presentable scope
 
-`Magic::Presentable` is mixed into `ActiveModel::Model` by default.
+`Magic::Presentable` is mixed into `ActiveModel::API` by default.
 It means that any model, be it `ActiveRecord::Base`, `Mongoid::Document` or whatever else, is _magically presentable_.
 
 ### Presenter class inference

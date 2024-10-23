@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-ActiveSupport.on_load :active_model do
-	include Magic::Presentable
+Rails.application.config.to_prepare do
+	ActiveModel::API.include Magic::Presentable
 end

@@ -6,6 +6,7 @@
 
 ### Fixed
 
+- Integration with Active Record models.
 - Lookup error reporting: `Magic::Presenter` should be used as a lookup base instead of `Magic::Decorator`.
 - Magic Lookup requires presenters to be eagerly loaded to be accessible via lookups.
 
