@@ -26,6 +26,17 @@ module Magic
 							.then { "#{_1}Presenter" }
 				end
 
+				def model_class
+					Presentable.classes
+							.select { Presenter.for(_1) == self }
+							.sole
+				rescue Enumerable::SoleItemExpectedError => error
+					raise Lookup::Error, "#{error.message
+							.sub('items', 'model classes')
+							.sub('item',  'model class')
+					} for #{self}"
+				end
+
 				def descendants
 					Magic.eager_load :presenters
 

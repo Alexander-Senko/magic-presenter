@@ -2,6 +2,7 @@
 
 ### Added
 
+- `Magic::Presenter::Base.model_class` as the inverse of 	`Magic::Presenter::Base.for`.
 - `Magic.eager_load` to eagerly load different class scopes, be them presenters, models or whatever else.
 
 

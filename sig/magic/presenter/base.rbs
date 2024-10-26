@@ -2,6 +2,8 @@ module Magic
 	module Presenter
 		class Base
 			extend Lookup
+
+			def self.model_class: () -> Class
 		end
 	end
 end
