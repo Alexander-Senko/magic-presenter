@@ -60,6 +60,7 @@ jobs:
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github
+        if: ${{ matrix.ruby == 'head' }}
 
       - name: >-
           Test ${{ steps.test.outcome }}
