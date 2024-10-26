@@ -29,5 +29,3 @@ group :development do
 
 	gem 'rbs'
 end
-
-gem 'magic-decorator', github: 'Alexander-Senko/magic-decorator' # TODO: remove when v0.3 is released
