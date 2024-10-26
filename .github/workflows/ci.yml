@@ -2,19 +2,19 @@ name: CI
 
 on:
   pull_request:
-    paths:
-      - '!*.md'
-      - '!*.txt'
+    paths-ignore:
+      - '*.md'
+      - '*.txt'
 
   push:
     branches: [ main ]
-    tags:
-      - '!*' # none
+    tags-ignore:
+      - '*'
     paths:
-      - lib/*
-      - app/*
-      - config/*
-      - spec/*
+      - lib/**
+      - app/**
+      - config/**
+      - spec/**
       - Gemfile*
       - '*.gemspec'
       - .github/workflows/ci.yml
