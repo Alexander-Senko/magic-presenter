@@ -1,3 +1,10 @@
+## [0.3.0] — UNRELEASED
+
+### Added
+
+- `Magic.eager_load` to eagerly load different class scopes, be them presenters, models or whatever else.
+
+
 ## [0.2.0] — 2024-10-26
 
 ### Added

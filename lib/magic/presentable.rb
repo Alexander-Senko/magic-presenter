@@ -7,6 +7,14 @@ module Magic
 	module Presentable
 		include Decoratable
 
+		class << self
+			def classes
+				Magic.eager_load :models
+
+				super
+			end
+		end
+
 		private
 
 		def decorator_base = Presenter

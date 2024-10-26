@@ -25,6 +25,12 @@ module Magic
 							.delete_suffix('Record')
 							.then { "#{_1}Presenter" }
 				end
+
+				def descendants
+					Magic.eager_load :presenters
+
+					super
+				end
 			end
 		end
 	end

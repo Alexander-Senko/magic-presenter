@@ -6,4 +6,6 @@ module Magic
 		def for:      (Class)  -> Class?
 		def name_for: (Module) -> String
 	end
+
+	def eager_load: (*interned scopes) -> Array[Pathname]
 end

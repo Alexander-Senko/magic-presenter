@@ -18,4 +18,17 @@ module Magic # :nodoc:
 		def for(...)      = Base.for(...)
 		def name_for(...) = Base.name_for(...)
 	end
+
+	module_function
+
+	def eager_load *scopes
+		return if Rails.application.config.eager_load
+
+		scopes
+				.map(&:to_s)
+				.map(&:pluralize)
+				.map { Rails.root / 'app' / _1 }
+				.select(&:exist?)
+				.each { Rails.autoloaders.main.eager_load_dir _1 }
+	end
 end
