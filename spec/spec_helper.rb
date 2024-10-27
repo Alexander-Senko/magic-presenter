@@ -7,6 +7,7 @@
 # files.
 
 require 'rspec/its'
+require 'rspec-html-matchers'
 require 'simplecov'
 
 SimpleCov.start do
@@ -25,6 +26,8 @@ require_relative 'support/method'
 
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+	config.include RSpecHtmlMatchers, type: :view
+
 	# rspec-expectations config goes here. You can use an alternate
 	# assertion/expectation library such as wrong or the stdlib/minitest
 	# assertions if you prefer.

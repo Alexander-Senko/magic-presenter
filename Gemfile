@@ -14,6 +14,7 @@ group :test do
 	gem 'rspec'
 	gem 'rspec-its'
 	gem 'rspec-rails'
+	gem 'rspec-html-matchers'
 	gem 'ammeter'
 
 	gem 'simplecov', require: false
