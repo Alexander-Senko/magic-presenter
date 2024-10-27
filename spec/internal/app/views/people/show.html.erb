@@ -1,0 +1,17 @@
+<article class="person">
+	<h1 class="name"><%= @person.name %></h1>
+
+	<% if defined? family %>
+		<section class="family">
+			<h2>Family</h2>
+
+			<ul class="people">
+				<% for person in family do %>
+					<li class="person">
+						<%= render person %>
+					</li>
+			<% end %>
+			</ul>
+		</section>
+	<% end %>
+</article>
