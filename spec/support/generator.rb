@@ -12,6 +12,10 @@ RSpec.shared_context :generator do
 		prepare_destination
 		run_generator arguments
 	end
+
+	after :context do
+		prepare_destination
+	end
 end
 
 RSpec.configure do |config|
