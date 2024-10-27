@@ -71,8 +71,8 @@ RSpec.describe PresenterGenerator do
 		end
 	end
 
-	describe 'Person' do
-		let(:path) { 'app/presenters/person_presenter.rb' }
+	describe 'Book' do
+		let(:path) { 'app/presenters/book_presenter.rb' }
 
 		it_behaves_like :generated_presenter do
 			context 'with a parent' do

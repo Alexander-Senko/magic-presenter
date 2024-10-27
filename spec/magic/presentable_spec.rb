@@ -8,10 +8,8 @@ module Magic
 
 		def presenter_class = Class.new Presenter::Base
 
-		after do
-			Presenter::Base.clear_memery_cache!
-			GC.start # purge removed classes
-		end
+		before { GC.start } # purge removed classes
+		after  { Presenter::Base.clear_memery_cache! }
 
 		shared_context :model do
 			before { object.singleton_class.include ActiveModel::Model }
