@@ -18,6 +18,7 @@ module Magic
 		# up to `ObjectPresenter`.
 		class Base < Decorator::Base
 			include GlobalID if defined? ::GlobalID
+			prepend Helpers  if defined? ::ActionView
 
 			class << self
 				def name_for object_class

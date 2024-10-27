@@ -68,6 +68,33 @@ See the help for more info:
 
 	$ bin/rails generate presenter --help
 
+### View helpers
+
+A presenter can use any helpers via `#helpers` (aliased as `#h`) both in class and instance methods:
+
+```ruby
+class PersonPresenter < Magic::Presenter::Base
+  def self.links
+    [ h.link_to('All', model_class) ]
+  end
+  
+  def link(...) 
+    helpers.link_to(name, self, ...)
+  end
+end
+```
+
+A view context must be set to enable helpers.
+
+```ruby
+Magic::Presenter.with view_context: ApplicationController.new.view_context do
+  # put the code that uses helpers within presenters here
+end
+```
+
+> [!NOTE]
+> A valid `request` may be needed for URL helpers to get host info.
+
 ## 🧙 Magic
 
 It’s based on [Magic Decorator](
@@ -108,6 +135,20 @@ Magic::Presenter.name_for Person # => "PersonPresenter"
 > [!IMPORTANT]
 > Every object passed to views is decorated automagically.
 > This involves both implicit instance variables and `locals` passed explicitly.
+
+### Helpers
+
+One can call helpers directly without explicit `helper` or `h`:
+
+```ruby
+class PersonPresenter < Magic::Presenter::Base
+  def self.links
+    [ link_to('All', model_class) ]
+  end
+
+  def link(...) = link_to(name, self, ...)
+end
+```
 
 ## Development
 

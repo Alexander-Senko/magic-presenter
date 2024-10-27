@@ -1,5 +1,9 @@
 ## [0.4.0] — UNRELEASED
 
+### Added
+
+- View helpers inside presenter context.
+
 
 ## [0.3.0] — 2024-10-27
 
