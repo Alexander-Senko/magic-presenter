@@ -31,10 +31,11 @@ jobs:
           - 3.3
           - 3.2
 
+          - truffleruby-head
+
         include:
           # TruffleRuby
-          - { ruby: 'truffleruby',      allow-fail: true }
-          - { ruby: 'truffleruby-head', allow-fail: true }
+          - { ruby: 'truffleruby', allow-fail: true }
 
           # JRuby
           #- { ruby: 'jruby',      allow-fail: true }
