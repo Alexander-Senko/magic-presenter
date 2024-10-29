@@ -85,6 +85,8 @@ end
 ```
 
 A view context must be set to enable helpers.
+It’s done automagically [wherever possible](#view-context).
+However, one can set it explicitly anywhere:
 
 ```ruby
 Magic::Presenter.with view_context: ApplicationController.new.view_context do
@@ -149,6 +151,11 @@ class PersonPresenter < Magic::Presenter::Base
   def link(...) = link_to(name, self, ...)
 end
 ```
+
+#### View context
+
+View context is set automagically to enable helpers:
+- in views.
 
 ## Development
 

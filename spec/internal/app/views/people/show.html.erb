@@ -1,3 +1,11 @@
+<nav>
+	<ul>
+		<% for link in @person.class.links do %>
+			<li><%= link %></li>
+		<% end %>
+	</ul>
+</nav>
+
 <article class="person">
 	<h1 class="name"><%= @person.name %></h1>
 
@@ -10,7 +18,7 @@
 					<li class="person">
 						<%= render person %>
 					</li>
-			<% end %>
+				<% end %>
 			</ul>
 		</section>
 	<% end %>

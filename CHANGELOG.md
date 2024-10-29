@@ -3,6 +3,7 @@
 ### Added
 
 - View helpers inside presenter context.
+- View helpers for presenters within views.
 
 
 ## [0.3.0] — 2024-10-27

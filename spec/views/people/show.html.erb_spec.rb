@@ -22,4 +22,16 @@ RSpec.describe 'people/show' do
 
 		it { is_expected.to have_tag '.family .person .name', text: 'Mathew Johnson' }
 	end
+
+	describe 'helpers' do
+		describe 'instance-level' do
+			let(:locals) { { family: [ mathew ] } }
+
+			it { is_expected.to have_tag '.person a', href: url_for(mathew), text: 'Mathew Johnson' }
+		end
+
+		describe 'class-level' do
+			it { is_expected.to have_tag 'nav a', href: people_path, text: 'All' }
+		end
+	end
 end
