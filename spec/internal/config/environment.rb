@@ -7,6 +7,7 @@ require 'combustion'
 Combustion.initialize! *%i[
 		active_record
 		action_controller
+		action_mailer
 		active_job
 ], **{
 		database_reset: false,

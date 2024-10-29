@@ -1,0 +1,21 @@
+<% content_for :links do %>
+	<ul>
+		<% for link in @person.class.links do %>
+			<li><%= link %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<h1>Welcome <%= @person.link %>!</h1>
+
+<% if @family %>
+	<h2>Family</h2>
+
+	<ul>
+		<% for person in @family do %>
+			<li>
+				<%= render person %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

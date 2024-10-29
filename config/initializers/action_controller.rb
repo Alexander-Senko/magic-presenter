@@ -11,3 +11,4 @@ presenter_context = proc do
 end
 
 ActiveSupport.on_load :action_controller, &presenter_context
+ActiveSupport.on_load :action_mailer,     &presenter_context

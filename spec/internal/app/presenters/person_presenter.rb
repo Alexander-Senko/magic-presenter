@@ -7,6 +7,12 @@ class PersonPresenter < ApplicationPresenter
 					link_to('All', model_class),
 			]
 		end
+
+		def urls
+			{
+					all: url_for(model_class),
+			}
+		end
 	end
 
 	def name = "#{first_name} #{last_name}"

@@ -1,0 +1,12 @@
+Welcome <%= @person.name %>!
+
+<% if @family %>Family:
+<% for person in @family do %>
+* <%= person.name %><% end %>
+<% end %>
+
+Details: <%= @url %>
+
+<% for name, url in @urls do %>See also:
+* <%= name.to_s.humanize %>: <%= url %>
+<% end %>

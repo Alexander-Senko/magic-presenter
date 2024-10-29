@@ -5,6 +5,7 @@
 - View helpers inside presenter context.
 - View helpers for presenters within views.
 - View helpers for presenters within controllers.
+- View helpers for presenters within mailers.
 
 
 ## [0.3.0] — 2024-10-27
