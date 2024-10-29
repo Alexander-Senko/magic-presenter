@@ -12,10 +12,9 @@ module Magic # :nodoc:
 		autoload :GlobalID,  'magic/presenter/global_id'
 		autoload :Generator, 'generators/magic/presenter/generator'
 
-		module_function
-
-		def for(...)      = Base.for(...)
-		def name_for(...) = Base.name_for(...)
+		singleton_class.delegate *%i[
+				for name_for
+		], to: Base
 	end
 
 	module_function
