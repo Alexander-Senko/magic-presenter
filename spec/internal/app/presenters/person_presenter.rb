@@ -11,6 +11,8 @@ class PersonPresenter < ApplicationPresenter
 
 	def name = "#{first_name} #{last_name}"
 
+	def url = url_for self
+
 	def link(...) = link_to(name, self, ...)
 
 	def to_s = name

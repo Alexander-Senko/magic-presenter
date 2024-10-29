@@ -155,7 +155,8 @@ end
 #### View context
 
 View context is set automagically to enable helpers:
-- in views.
+- in views,
+- in controller actions.
 
 ## Development
 
