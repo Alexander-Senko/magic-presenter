@@ -12,7 +12,9 @@
 
 A bit of history: this gem was inspired by digging deeper into [Draper](https://github.com/drapergem/draper) with an eye on a refactoring.
 
-Based on [Magic Decorator](https://github.com/Alexander-Senko/magic-decorator), it implements a presenter logic.
+Based on [Magic Decorator](
+	https://github.com/Alexander-Senko/magic-decorator
+), it implements a presenter logic.
 
 ## Installation
 
@@ -99,9 +101,10 @@ end
 
 ## 🧙 Magic
 
-It’s based on [Magic Decorator](
-	https://github.com/Alexander-Senko/magic-decorator#magic
-), so get familiar with that one as well.
+> [!IMPORTANT]
+> It’s based on [Magic Decorator](
+> 	https://github.com/Alexander-Senko/magic-decorator#magic
+> ), so get familiar with that one as well.
 
 ### Presentable scope
 
@@ -115,7 +118,7 @@ Presenters provide automatic class inference for any model based on its class na
 ).
 
 For example, `MyNamespace::MyModel.new.decorate` looks for `MyNamespace::MyPresenter` first.
-When missing, it further looks for decorators for its ancestor classes, up to `ObjectPresenter`.
+When missing, it further looks for presenters for its ancestor classes, up to `ObjectPresenter`.
 
 #### Mapping rules
 
@@ -136,7 +139,7 @@ Magic::Presenter.name_for Person # => "PersonPresenter"
 
 > [!NOTE]
 > Magic Lookup doesn’t try to autoload any classes, it searches among already loaded ones instead.
-> Thus, presenters should be preloaded to be visible via lookups.
+> Thus, presenters should be preloaded to be visible via [lookups](#presenter-class-inference).
 
 This is done automatically in both _test_ and _production_ environments by Rails.
 All the application’s presenters and models are eagerly loaded before normal and reverse lookups by Magic Presenter as well.
@@ -160,7 +163,7 @@ Missing class methods of a presenter are delegated to a matching model class if 
 
 ### In views
 
-> [!IMPORTANT]
+> [!NOTE]
 > Every object passed to views is decorated automagically.
 > This involves both implicit instance variables and `locals` passed explicitly.
 

@@ -1,4 +1,4 @@
-## [1.0.0] — UNRELEASED
+## [1.0.0] — 2024-11-23
 
 This release marks the gem to be stable enough.
 
@@ -8,8 +8,14 @@ This release marks the gem to be stable enough.
 - An optional `engine:` parameter for `Magic.eager_load`
   to be used by other engines to make their presenters visible for lookups.
 - `Magic.each_engine` to iterate over all the engines attached.
+
+#### Tests
+
 - `Magic::Presenter::TestCase` to test presenters.
 - View context with routing helpers for presenter specs.
+
+#### Generators
+
 - Generate presenters instead of helpers.
 
 ### Fixed
