@@ -1,3 +1,12 @@
+## [1.0.0] — UNRELEASED
+
+This release marks the gem to be stable enough.
+
+### Added
+
+- Delegate missing presenter class methods to a model class.
+
+
 ## [0.4.0] — 2024-10-29
 
 ### Added

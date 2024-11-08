@@ -40,6 +40,8 @@ module Magic
 					} for #{self}"
 				end
 
+				delegate_missing_to :model_class
+
 				def descendants
 					Magic.eager_load :presenters
 

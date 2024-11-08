@@ -132,6 +132,11 @@ When in doubt, one can use `Magic::Presenter.name_for`:
 Magic::Presenter.name_for Person # => "PersonPresenter"
 ```
 
+### Class methods delegation
+
+Missing class methods of a presenter are delegated to a matching model class if the latter can be inferred unambiguously.
+`Magic::Lookup::Error` is raised otherwise.
+
 ### In views
 
 > [!IMPORTANT]
