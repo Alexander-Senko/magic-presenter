@@ -21,7 +21,7 @@ on:
 
 jobs:
   lint:
-    name: Ruby ${{ matrix.ruby }}
+    name: Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
 
     runs-on: ubuntu-latest
     strategy:
@@ -33,13 +33,26 @@ jobs:
 
           - truffleruby-head
 
+        rails:
+          - head
+          - 8.0
+          - 7.2
+
         include:
           # TruffleRuby
-          - { ruby: 'truffleruby', allow-fail: true }
+          - { ruby: 'truffleruby', rails: '7.2', allow-fail: true }
 
           # JRuby
-          #- { ruby: 'jruby',      allow-fail: true }
-          #- { ruby: 'jruby-head', allow-fail: true }
+          #- { ruby: 'jruby',      rails: '7.2', allow-fail: true }
+          #- { ruby: 'jruby-head', rails: '7.2', allow-fail: true }
+
+        exclude:
+          # TruffleRuby
+          - { ruby: 'truffleruby-head', rails: 'head' }
+          - { ruby: 'truffleruby-head', rails: '8.0' }
+
+    env:
+      RAILS_VERSION: "${{ matrix.rails }}"
 
     steps:
       - name: Checkout code
@@ -61,9 +74,10 @@ jobs:
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github
-        if: ${{ matrix.ruby == 'head' }}
+        if: ${{ matrix.ruby == 'head' && matrix.rails == 'head' }}
 
       - name: >-
           Test ${{ steps.test.outcome }}
         run: |
-          echo Ruby  ${{ matrix.ruby  }}
+          ruby -v
+          bin/rails -v
