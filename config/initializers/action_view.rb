@@ -2,7 +2,7 @@
 
 ActiveSupport.on_load :action_view do # rubocop:disable Metrics/BlockLength
 	concerning :DecoratedAssignments, prepend: true do
-		def assign(assignments, ...)
+		def assign assignments
 			decorate assignments
 
 			super
