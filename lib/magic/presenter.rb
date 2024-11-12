@@ -21,13 +21,13 @@ module Magic # :nodoc:
 
 	module_function
 
-	def eager_load *scopes
+	def eager_load *scopes, engine: Rails.application
 		return if Rails.application.config.eager_load
 
 		scopes
 				.map(&:to_s)
 				.map(&:pluralize)
-				.map { Rails.root / 'app' / _1 }
+				.map { engine.root / 'app' / _1 }
 				.select(&:exist?)
 				.each { Rails.autoloaders.main.eager_load_dir _1 }
 	end

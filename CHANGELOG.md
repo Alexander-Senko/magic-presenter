@@ -5,6 +5,8 @@ This release marks the gem to be stable enough.
 ### Added
 
 - Delegate missing presenter class methods to a model class.
+- An optional `engine:` parameter for `Magic.eager_load`
+  to be used by other engines to make their presenters visible for lookups.
 
 
 ## [0.4.0] — 2024-10-29

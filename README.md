@@ -132,6 +132,27 @@ When in doubt, one can use `Magic::Presenter.name_for`:
 Magic::Presenter.name_for Person # => "PersonPresenter"
 ```
 
+#### Preloading
+
+> [!NOTE]
+> Magic Lookup doesn’t try to autoload any classes, it searches among already loaded ones instead.
+> Thus, presenters should be preloaded to be visible via lookups.
+
+This is done automatically in both _test_ and _production_ environments by Rails.
+All the application’s presenters and models are eagerly loaded before normal and reverse lookups by Magic Presenter as well.
+So, normally one shouldn’t worry about that.
+
+> [!IMPORTANT]
+> When developing a Rails engine that defines its own presenters, one should take care of the preloading themselves.
+
+That could be done in an initializer with a helper method provided:
+
+```ruby
+Rails.application.config.to_prepare do
+  Magic.eager_load :presenters, engine: MyLib::Engine
+end
+```
+
 ### Class methods delegation
 
 Missing class methods of a presenter are delegated to a matching model class if the latter can be inferred unambiguously.

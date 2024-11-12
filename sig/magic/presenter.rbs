@@ -7,5 +7,5 @@ module Magic
 		def name_for: (Module) -> String
 	end
 
-	def eager_load: (*interned scopes) -> Array[Pathname]
+	def eager_load: (*interned scopes, ?engine: Rails::Engine) -> Array[Pathname]
 end
