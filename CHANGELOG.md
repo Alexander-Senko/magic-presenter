@@ -8,6 +8,10 @@ This release marks the gem to be stable enough.
 - An optional `engine:` parameter for `Magic.eager_load`
   to be used by other engines to make their presenters visible for lookups.
 
+### Fixed
+
+- `undefined method 'configure' for module RSpec`.
+
 
 ## [0.4.0] — 2024-10-29
 
