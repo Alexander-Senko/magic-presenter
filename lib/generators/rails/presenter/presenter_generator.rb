@@ -3,6 +3,7 @@
 module Rails
 	class PresenterGenerator < Generators::NamedBase # :nodoc:
 		include Magic::Presenter::Generator
+		include Generators::ResourceHelpers
 
 		source_root File.expand_path('templates', __dir__)
 
@@ -19,7 +20,9 @@ module Rails
 			template 'presenter.rb', "#{file_path}.rb"
 		end
 
-		hook_for :test_framework
+		hook_for :test_framework do |generator|
+			invoke generator, [ name ]
+		end
 
 		private
 
