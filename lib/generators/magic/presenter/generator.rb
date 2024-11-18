@@ -3,7 +3,7 @@
 module Magic
 	module Presenter
 		module Generator # :nodoc:
-			require 'generators/presenter/presenter_generator'
+			require 'generators/rails/presenter/presenter_generator'
 
 			private
 
@@ -18,7 +18,7 @@ module Magic
 				root / 'presenters' / path
 			end
 
-			def presenter_path(*) = file_path(*, root: PresenterGenerator.target_root)
+			def presenter_path(*) = file_path(*, root: Rails::PresenterGenerator.target_root)
 		end
 	end
 end

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'generators/presenter/presenter_generator'
+require 'generators/rails/presenter/presenter_generator'
 
 $LOAD_PATH << Rails.application.root.join('test').to_s
 
-RSpec.describe PresenterGenerator do
+RSpec.describe Rails::PresenterGenerator do
 	let(:name)           { self.class.description }
 	let(:presenter_name) { Magic::Presenter.name_for name }
 	let(:presenter)      { presenter_name.safe_constantize }

@@ -1,4 +1,4 @@
-class PresenterGenerator
+class Rails::PresenterGenerator
 	PATH: Pathname
 
 	private

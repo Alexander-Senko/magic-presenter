@@ -10,6 +10,7 @@ This release marks the gem to be stable enough.
 - `Magic.each_engine` to iterate over all the engines attached.
 - `Magic::Presenter::TestCase` to test presenters.
 - View context with routing helpers for presenter specs.
+- Generate presenters instead of helpers.
 
 ### Fixed
 

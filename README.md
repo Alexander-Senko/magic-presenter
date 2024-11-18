@@ -185,6 +185,11 @@ View context is set automagically to enable helpers:
 - in controller actions,
 - in mailer actions.
 
+## Generators
+
+> [!NOTE]
+> The built-in `helper` generator is overridden with `presenter` one to generate presenters instead of helpers.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
