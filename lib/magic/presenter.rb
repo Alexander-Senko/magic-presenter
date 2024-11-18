@@ -11,6 +11,7 @@ module Magic # :nodoc:
 		autoload :Base,      'magic/presenter/base'
 		autoload :Helpers,   'magic/presenter/helpers'
 		autoload :GlobalID,  'magic/presenter/global_id'
+		autoload :TestCase,  'magic/presenter/test_case'
 		autoload :Generator, 'generators/magic/presenter/generator'
 
 		singleton_class.delegate *%i[

@@ -7,6 +7,7 @@ This release marks the gem to be stable enough.
 - Delegate missing presenter class methods to a model class.
 - An optional `engine:` parameter for `Magic.eager_load`
   to be used by other engines to make their presenters visible for lookups.
+- `Magic::Presenter::TestCase` to test presenters.
 - View context with routing helpers for presenter specs.
 
 ### Fixed

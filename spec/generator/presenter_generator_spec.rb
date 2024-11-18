@@ -45,7 +45,7 @@ RSpec.describe PresenterGenerator do
 				describe 'generated test' do
 					subject { "#{presenter_name}Test".safe_constantize }
 
-					it { is_expected.to be < ActiveSupport::TestCase }
+					it { is_expected.to be < Magic::Presenter::TestCase }
 				end
 			end
 
@@ -64,7 +64,7 @@ RSpec.describe PresenterGenerator do
 					subject { "RSpec::ExampleGroups::#{presenter_name.delete '::'}_3".safe_constantize } # HACK: name heuristics
 
 					it { is_expected.to be < RSpec::Core::ExampleGroup }
-					it { is_expected.to be < PresenterExampleGroup }
+					it { is_expected.to be < RSpec::Rails::PresenterExampleGroup }
 					it { is_expected.to have_attributes metadata: include(type: :presenter) }
 				end
 			end

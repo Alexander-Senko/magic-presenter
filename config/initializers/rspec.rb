@@ -1,18 +1,17 @@
 # frozen_string_literal: true
 
-RSpec.configure do |config|
-	config.include concern(:PresenterExampleGroup) {
-		included do
-			metadata[:type] = :presenter
+if defined? RSpec::Core
+	RSpec.configure do |config|
+		if defined? RSpec::Rails
+			require 'rspec/rails/example/presenter_example_group'
 
-			include RSpec::Rails::HelperExampleGroup
-
-			Rails.application
-					.then { [ _1, *_1.railties ] }
-					.grep(Rails::Engine)
-					.each { include _1.routes.url_helpers }
-
-			around { Magic::Presenter.with view_context: self, &_1 }
+			config.include RSpec::Rails::PresenterExampleGroup, type: :presenter
 		end
-	}, file_path: %r'spec/presenters', type: :presenter
-end if defined? RSpec::Core
+
+		# Tag all groups and examples in the spec/presenters directory with
+		# type: :presenter
+		config.define_derived_metadata file_path: %r'/spec/presenters/' do |metadata|
+			metadata[:type] ||= :presenter
+		end
+	end
+end
