@@ -24,7 +24,7 @@ ActiveSupport.on_load :action_view do # rubocop:disable Metrics/BlockLength
 
 	concerning :PresenterContext, prepend: true do
 		def in_rendering_context(...)
-			Magic::Presenter::Base.with view_context: self do
+			Magic::Presenter.with view_context: self do
 				super
 			end
 		end
