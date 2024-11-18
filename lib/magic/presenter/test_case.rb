@@ -13,10 +13,7 @@ module Magic
 				include ActionView::TestCase::Behavior
 
 				included do
-					Rails.application
-							.then { [ _1, *_1.railties ] }
-							.grep(Rails::Engine)
-							.each { include _1.routes.url_helpers }
+					Magic.each_engine { include _1.routes.url_helpers }
 				end
 			end
 

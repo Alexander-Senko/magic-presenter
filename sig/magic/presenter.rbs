@@ -8,4 +8,7 @@ module Magic
 	end
 
 	def eager_load: (*interned scopes, ?engine: Rails::Engine) -> Array[Pathname]
+
+	def each_engine: () { (Rails::Engine engine) -> void } -> Array[Rails::Engine]
+			           | () -> Enumerator[Rails::Engine]
 end
