@@ -17,6 +17,10 @@ This release marks the gem to be stable enough.
 - `undefined method 'configure' for module RSpec`.
 - Instance variables assignment in views.
 
+### Documentation
+
+- Added a section about testing.
+
 
 ## [0.4.0] — 2024-10-29
 

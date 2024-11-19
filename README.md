@@ -190,6 +190,29 @@ View context is set automagically to enable helpers:
 > [!NOTE]
 > The built-in `helper` generator is overridden with `presenter` one to generate presenters instead of helpers.
 
+## Testing presenters
+
+Magic Presenter supports RSpec and Test::Unit.
+The appropriate tests are generated alongside a presenter.
+
+Testing presenters is much like [testing Rails helpers](
+	https://guides.rubyonrails.org/testing.html#testing-helpers
+).
+Since the test class inherits from `ActionView::TestCase`, Rails’ helper methods such as `link_to`, `localize` and many others are available in tests.
+
+As any presenter is a decorator, see also [how to test decorators](
+	https://github.com/Alexander-Senko/magic-decorator#testing-decorators
+).
+
+### RSpec
+
+Presenter specs are expected to live in `spec/presenters`.
+If a different path is used, `type: :presenter` metadata should be set explicitly.
+
+### Test::Unit
+
+Tests related to the presenters are located under the `test/presenters` directory and inherit from `Magic::Presenter::TestCase`.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
