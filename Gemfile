@@ -9,6 +9,7 @@ gem 'puma'
 
 gem 'sqlite3'
 gem 'combustion'
+gem 'magic-support'
 
 group :test do
 	gem 'rspec'
