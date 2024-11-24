@@ -22,20 +22,20 @@ module Magic
 		end
 
 		shared_examples 'returns decorated object' do
-			its([]) { is_expected.to eq object }
-			its([]) { is_expected.to be_decorated }
+			its_result { is_expected.to eq object }
+			its_result { is_expected.to be_decorated }
 		end
 
 		shared_examples 'returns the object decorated by a presenter' do
 			include_examples 'returns decorated object'
 
-			its([]) { is_expected.to be_a Presenter::Base }
+			its_result { is_expected.to be_a Presenter::Base }
 		end
 
 		shared_examples 'returns the object decorated by a non-presenter' do
 			include_examples 'returns decorated object'
 
-			its([]) { is_expected.not_to be_a Presenter::Base }
+			its_result { is_expected.not_to be_a Presenter::Base }
 		end
 
 		shared_examples 'fails to find a presenter' do
@@ -44,7 +44,7 @@ module Magic
 			it { expect { subject[] }.to raise_error /default name is #{object.class}Presenter/ }
 		end
 
-		describe '#decorate!', :method do
+		describe '#decorate!' do
 			it_behaves_like :model do
 				include_examples 'fails to find a presenter'
 

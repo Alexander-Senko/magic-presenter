@@ -2,14 +2,14 @@
 
 module Magic
 	RSpec.describe Presenter do
-		describe '.for', :method do
+		describe '.for' do
 			it_behaves_like :delegated,
-					to: Presenter::Base, with: Array
+					to: Presenter::Base, with: Class.new
 		end
 
-		describe '.name_for', :method do
+		describe '.name_for' do
 			it_behaves_like :delegated,
-					to: Presenter::Base, with: Array
+					to: Presenter::Base, with: Class.new
 		end
 	end
 end

@@ -7,17 +7,17 @@ module Magic
 
 			let(:object) { 2.times.map { rand } }
 
-			describe '.name_for', :method do
-				its(['MyObject']) { is_expected.to eq 'MyObjectPresenter' }
-				its(['MyModel' ]) { is_expected.to eq 'MyPresenter' }
-				its(['MyRecord']) { is_expected.to eq 'MyPresenter' }
+			describe '.name_for' do
+				its_result('MyObject') { is_expected.to eq 'MyObjectPresenter' }
+				its_result('MyModel')  { is_expected.to eq 'MyPresenter' }
+				its_result('MyRecord') { is_expected.to eq 'MyPresenter' }
 			end
 
-			describe '.model_class', :method do
+			describe '.model_class' do
 				context 'when presenting the only model' do
 					subject { Presenter.for Person }
 
-					its([]) { is_expected.to eq Person }
+					its_result { is_expected.to eq Person }
 				end
 
 				context 'when presenting multiple models' do

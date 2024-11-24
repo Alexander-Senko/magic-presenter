@@ -7,6 +7,7 @@
 # files.
 
 require 'rspec/its'
+require 'rspec/method'
 require 'rspec/retry'
 require 'rspec-html-matchers'
 require 'simplecov'
@@ -22,8 +23,6 @@ end
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-
-require_relative 'support/method'
 
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
