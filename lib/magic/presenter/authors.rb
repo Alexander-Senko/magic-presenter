@@ -1,27 +1,25 @@
 # frozen_string_literal: true
 
-Gem::Author ||= Struct.new(
-		:name,
-		:email,
-		:github,
-) do
-	def github_url = github && "https://github.com/#{github}"
+begin
+	require 'rubygems/author'
+rescue LoadError # HACK: install magic-support
+	`gem install magic-support --no-lock --ignore-dependencies --no-document`
+			.match(/^Successfully installed (?<full_name>.*)$/)
+			&.match(:full_name)
+			&.then { Bundler.bundle_path.join 'gems', _1, 'lib' }
+			&.then { $LOAD_PATH << _1 }
+
+	require 'rubygems/author' # retry
 end
 
 module Magic
-	module Presenter # :nodoc:
-		AUTHORS = [ # rubocop:disable Style/MutableConstant
-				Gem::Author.new(
-						name:   'Alexander Senko',
-						email:  'Alexander.Senko@gmail.com',
-						github: 'Alexander-Senko',
-				),
-		]
-
-		class << AUTHORS
-			def names      = filter_map &:name
-			def emails     = filter_map &:email
-			def github_url = filter_map(&:github_url).first
+	module Presenter
+		class Author < Gem::Author # :nodoc:
+			new(
+					name:   'Alexander Senko',
+					email:  'Alexander.Senko@gmail.com',
+					github: 'Alexander-Senko',
+			)
 		end
 	end
 end

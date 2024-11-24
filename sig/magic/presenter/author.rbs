@@ -1,0 +1,9 @@
+module Magic
+	module Presenter
+		class Author < Gem::Author
+			extend Gem::Author::ClassMethods
+
+			attr_reader self.all: Array[self]
+		end
+	end
+end
