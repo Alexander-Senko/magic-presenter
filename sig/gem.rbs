@@ -1,5 +1,0 @@
-module Gem
-	class Author
-		def github_url: () -> String?
-	end
-end

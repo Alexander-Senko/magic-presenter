@@ -1,7 +1,6 @@
 module Magic
 	module Presenter
 		VERSION: String
-		AUTHORS: Array[Gem::Author]
 
 		def for:      (Class)  -> Class?
 		def name_for: (Module) -> String

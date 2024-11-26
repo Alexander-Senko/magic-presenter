@@ -6,9 +6,9 @@ require_relative 'lib/magic/presenter/authors'
 Gem::Specification.new do |spec|
 	spec.name        = 'magic-presenter'
 	spec.version     = Magic::Presenter::VERSION
-	spec.authors     = Magic::Presenter::AUTHORS.names
-	spec.email       = Magic::Presenter::AUTHORS.emails
-	spec.homepage    = "#{Magic::Presenter::AUTHORS.github_url}/#{spec.name}"
+	spec.authors     = Magic::Presenter::Author.names
+	spec.email       = Magic::Presenter::Author.emails
+	spec.homepage    = "#{Magic::Presenter::Author.github_url}/#{spec.name}"
 	spec.summary     = 'Presentation layer for Rails models'
 	spec.description = 'Based on Magic Decorator, it’s meant to replace Draper.'
 	spec.license     = 'MIT'

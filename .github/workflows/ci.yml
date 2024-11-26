@@ -27,22 +27,36 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+
+    env:
+      BUNDLE_WITHOUT: test
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      - name: Set up Ruby (RubyGems)
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: head
+          ruby-version: ${{ vars.RUBY_VERSION }}
+          bundler:      none
+      - name: Pre-install gems
+        run:  gem install -N rubygems-author
+        env:
+          GEM_HOME: vendor/bundle/ruby/${{ vars.RUBY_VERSION }}.0
+      - name: Set up Ruby (Bundler)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version:  ${{ vars.RUBY_VERSION }}
           bundler-cache: true
+          rubygems:      default # skip
 
       - name: Lint code for consistent style
-        run: bin/rubocop -f github
+        run:  bin/rubocop -f github
 
   test:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
+    name:    Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
     strategy:
       matrix:
         ruby:
@@ -61,17 +75,31 @@ jobs:
           - { ruby: head, rails: head }
 
     env:
-      RAILS_VERSION: "${{ matrix.rails }}"
+      RAILS_VERSION:  ${{ matrix.rails }}
+      BUNDLE_WITHOUT: development
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      - name: Set up Ruby (RubyGems)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler:      none
+      - name: Pre-install gems
+        id:   pre-install
+        run: |
+          gem install -N rubygems-author
+          gem info       rubygems-author |
+              ruby -e 'puts $stdin.read.sub /\A(\S+) \((.+)\).*Installed at: (\S+).*\z/m, "\\3/gems/\\1-\\2"' |
+              xargs -I {} echo RUBYLIB={}/lib >> $GITHUB_ENV
+      - name: Set up Ruby (Bundler)
         uses: ruby/setup-ruby@v1
         with:
           ruby-version:  ${{ matrix.ruby }}
           bundler-cache: true
+          rubygems:      default # skip
 
       - name: Run specs with code coverage
         uses: paambaati/codeclimate-action@v9
