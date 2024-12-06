@@ -13,6 +13,7 @@ gem 'combustion'
 group :test do
 	gem 'rspec'
 	gem 'rspec-its'
+	gem 'rspec-retry'
 	gem 'rspec-rails'
 	gem 'rspec-html-matchers'
 	gem 'ammeter'

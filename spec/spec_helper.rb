@@ -7,6 +7,7 @@
 # files.
 
 require 'rspec/its'
+require 'rspec/retry'
 require 'rspec-html-matchers'
 require 'simplecov'
 

@@ -12,6 +12,8 @@ module Magic
 		after  { Presenter::Base.clear_memery_cache! }
 
 		shared_context :model do
+			metadata[:retry] = 9 # FIXME
+
 			before { object.singleton_class.include ActiveModel::Model }
 		end
 
