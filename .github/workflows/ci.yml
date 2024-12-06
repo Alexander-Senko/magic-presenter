@@ -69,7 +69,7 @@ jobs:
           CC_TEST_REPORTER_ID: c0d55225dd080a6c275d1312813d3ed860fa93f6f2fc7a4d37a30c9d6b4e9418
         with:
           coverageCommand: bundle exec rake
-        continue-on-error: ${{ matrix.allow-fail }}
+        continue-on-error: ${{ matrix.allow-fail || false }}
         id: test
 
       - name: Lint code for consistent style
