@@ -8,6 +8,7 @@
 
 require 'rspec/its'
 require 'rspec/method'
+require 'rspec/retry'
 require 'rspec-html-matchers'
 require 'simplecov'
 
