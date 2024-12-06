@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'delegate'
-
 module Magic
 	module Presenter
 		# = Magic Presenter
