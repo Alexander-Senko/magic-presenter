@@ -1,13 +1,9 @@
 name: CI
 
 on:
-  pull_request:
-    paths-ignore:
-      - '*.md'
-      - '*.txt'
-
   push:
-    branches: [ main ]
+    branches:
+      - main
     tags-ignore:
       - '*'
     paths:
@@ -18,12 +14,35 @@ on:
       - Gemfile*
       - '*.gemspec'
       - .github/workflows/ci.yml
+      - .rspec*
+      - .rubocop*
+      - '!**/version.rb'
+
+  pull_request:
+    paths-ignore:
+      - '*.md'
+      - '*.txt'
+      - '**/version.rb'
 
 jobs:
   lint:
-    name: Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
-
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: head
+          bundler-cache: true
+
+      - name: Lint code for consistent style
+        run: bin/rubocop -f github
+
+  test:
+    runs-on: ubuntu-latest
+    name: Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
     strategy:
       matrix:
         ruby:
@@ -61,10 +80,11 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version:  ${{ matrix.ruby }}
           bundler-cache: true
 
-      - uses: paambaati/codeclimate-action@v9
+      - name: Run specs with code coverage
+        uses: paambaati/codeclimate-action@v9
         env:
           CC_TEST_REPORTER_ID: c0d55225dd080a6c275d1312813d3ed860fa93f6f2fc7a4d37a30c9d6b4e9418
         with:
@@ -72,12 +92,7 @@ jobs:
         continue-on-error: ${{ matrix.allow-fail || false }}
         id: test
 
-      - name: Lint code for consistent style
-        run: bin/rubocop -f github
-        if: ${{ matrix.ruby == 'head' && matrix.rails == 'head' }}
-
-      - name: >-
-          Test ${{ steps.test.outcome }}
+      - name: Test ${{ steps.test.outcome }}
         run: |
           ruby -v
           bin/rails -v
