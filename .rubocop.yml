@@ -3,7 +3,7 @@ inherit_from:
   - https://github.com/Alexander-Senko/Alexander-Senko/raw/refs/heads/main/.rubocop-rails.yml
   - https://github.com/Alexander-Senko/Alexander-Senko/raw/refs/heads/main/.rubocop-rspec.yml
 
-require:
+plugins:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-rspec_rails
