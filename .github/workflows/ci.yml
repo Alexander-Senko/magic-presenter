@@ -46,29 +46,19 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - head
+          - 3.4
           - 3.3
           - 3.2
 
+          - truffleruby
           - truffleruby-head
 
         rails:
-          - head
           - 8.0
           - 7.2
 
         include:
-          # TruffleRuby
-          - { ruby: 'truffleruby', rails: '7.2', allow-fail: true }
-
-          # JRuby
-          #- { ruby: 'jruby',      rails: '7.2', allow-fail: true }
-          #- { ruby: 'jruby-head', rails: '7.2', allow-fail: true }
-
-        exclude:
-          # TruffleRuby
-          - { ruby: 'truffleruby-head', rails: 'head' }
-          - { ruby: 'truffleruby-head', rails: '8.0' }
+          - { ruby: head, rails: head }
 
     env:
       RAILS_VERSION: "${{ matrix.rails }}"
