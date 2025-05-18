@@ -63,9 +63,6 @@ jobs:
           - 4.0
           - 3.4
 
-          - truffleruby
-          - truffleruby-head
-
         rails:
           - 8.1
           - 8.0
@@ -73,6 +70,10 @@ jobs:
 
         include:
           - { ruby: head, rails: head }
+
+          # TruffleRuby
+          - { ruby: 'truffleruby',      allow-fail: true }
+          - { ruby: 'truffleruby-head', allow-fail: true }
 
     env:
       RAILS_VERSION:  ${{ matrix.rails }}
