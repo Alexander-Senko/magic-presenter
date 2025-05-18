@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'rails', '>= 7.2', '< 9'
 	spec.add_dependency 'magic-decorator', '~> 1.0'
 	spec.add_dependency 'magic-lookup'
+	spec.add_dependency 'magic-support'
 end
