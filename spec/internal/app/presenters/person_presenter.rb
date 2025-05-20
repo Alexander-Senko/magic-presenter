@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PersonPresenter < ApplicationPresenter
+class PersonPresenter < AgentPresenter
 	class << self
 		def links
 			[

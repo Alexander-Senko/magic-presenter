@@ -31,7 +31,7 @@ module Magic
 
 				def model_class
 					Presentable.classes
-							.select { Presenter.for(_1) == self }
+							.select { self.for(_1) == self }
 							.sole
 				rescue Enumerable::SoleItemExpectedError => error
 					raise Lookup::Error, "#{error.message

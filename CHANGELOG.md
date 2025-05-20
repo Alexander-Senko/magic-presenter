@@ -1,5 +1,10 @@
 ## [1.1.0] — UNRELEASED
 
+### Added
+
+- Handling of edge cases in `Magic::Presenter::Base.model_class`:
+	- Respect overridden `.for` instead of using the basic `Presenter.for` all the time.
+
 
 ## [1.0.0] — 2024-11-23
 

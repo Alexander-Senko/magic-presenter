@@ -21,7 +21,7 @@ module Magic
 				end
 
 				context 'when presenting multiple models' do
-					subject { Presenter.for ApplicationRecord }
+					subject { AgentPresenter }
 
 					it { expect { subject.call }.to raise_error Lookup::Error }
 					it { expect { subject.call }.to raise_error "multiple model classes found for #{receiver}" }
