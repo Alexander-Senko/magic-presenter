@@ -23,15 +23,15 @@ module Magic
 				context 'when presenting multiple models' do
 					subject { Presenter.for ApplicationRecord }
 
-					it { expect { subject[] }.to raise_error Lookup::Error }
-					it { expect { subject[] }.to raise_error "multiple model classes found for #{receiver}" }
+					it { expect { subject.call }.to raise_error Lookup::Error }
+					it { expect { subject.call }.to raise_error "multiple model classes found for #{receiver}" }
 				end
 
 				context 'when presenting no models' do
 					subject { stub_const 'AbstractPresenter', Class.new(ApplicationPresenter) }
 
-					it { expect { subject[] }.to raise_error Lookup::Error }
-					it { expect { subject[] }.to raise_error "no model class found for #{receiver}" }
+					it { expect { subject.call }.to raise_error Lookup::Error }
+					it { expect { subject.call }.to raise_error "no model class found for #{receiver}" }
 				end
 			end
 		end

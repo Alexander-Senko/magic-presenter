@@ -39,9 +39,9 @@ module Magic
 		end
 
 		shared_examples 'fails to find a presenter' do
-			it { expect { subject[] }.to raise_error Lookup::Error }
-			it { expect { subject[] }.to raise_error /no Magic::Presenter found/ }
-			it { expect { subject[] }.to raise_error /default name is #{object.class}Presenter/ }
+			it { expect { subject.call }.to raise_error Lookup::Error }
+			it { expect { subject.call }.to raise_error /no Magic::Presenter found/ }
+			it { expect { subject.call }.to raise_error /default name is #{object.class}Presenter/ }
 		end
 
 		describe '#decorate!' do
