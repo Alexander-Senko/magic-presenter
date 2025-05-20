@@ -3,7 +3,8 @@
 ### Added
 
 - Handling of edge cases in `Magic::Presenter::Base.model_class`:
-	- Respect overridden `.for` instead of using the basic `Presenter.for` all the time.
+	- Guess a corresponding model class by name when several matching ones are found.
+	- Respect overridden `.for`/`.name_for` instead of using the basic `Presenter.for` all the time.
 
 
 ## [1.0.0] — 2024-11-23

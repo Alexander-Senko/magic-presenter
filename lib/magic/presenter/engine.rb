@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'magic/core_ext/kernel/optional'
+
 module Magic
 	module Presenter
 		class Engine < ::Rails::Engine # :nodoc:

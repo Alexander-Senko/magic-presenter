@@ -25,6 +25,12 @@ module Magic
 
 					it { expect { subject.call }.to raise_error Lookup::Error }
 					it { expect { subject.call }.to raise_error "multiple model classes found for #{receiver}" }
+
+					context 'when one can be guessed by name' do
+						subject { Presenter.for ApplicationRecord }
+
+						its_result { is_expected.to eq ApplicationRecord }
+					end
 				end
 
 				context 'when presenting no models' do

@@ -32,6 +32,13 @@ module Magic
 				def model_class
 					Presentable.classes
 							.select { self.for(_1) == self }
+							.optional do |classes|
+								next unless classes.many?
+
+								classes
+										.select { name_for(_1) == name }
+										.optional { classes if _1.empty? } # lookup failed — return original
+							end
 							.sole
 				rescue Enumerable::SoleItemExpectedError => error
 					raise Lookup::Error, "#{error.message
