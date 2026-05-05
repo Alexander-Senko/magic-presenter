@@ -60,6 +60,7 @@ jobs:
     strategy:
       matrix:
         ruby:
+          - 4.0
           - 3.4
           - 3.3
           - 3.2
@@ -68,6 +69,7 @@ jobs:
           - truffleruby-head
 
         rails:
+          - 8.1
           - 8.0
           - 7.2
 
