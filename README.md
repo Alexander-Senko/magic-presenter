@@ -3,11 +3,15 @@
 ![GitHub Actions Workflow Status](
 	https://img.shields.io/github/actions/workflow/status/Alexander-Senko/magic-presenter/ci.yml
 )
-![Code Climate maintainability](
-	https://img.shields.io/codeclimate/maintainability-percentage/Alexander-Senko/magic-presenter
+[![Maintainability](
+	https://qlty.sh/gh/Alexander-Senko/projects/magic-presenter/maintainability.svg
+)](
+	https://qlty.sh/gh/Alexander-Senko/projects/magic-presenter
 )
-![Code Climate coverage](
-	https://img.shields.io/codeclimate/coverage/Alexander-Senko/magic-presenter
+[![Code Coverage](
+	https://qlty.sh/gh/Alexander-Senko/projects/magic-presenter/coverage.svg
+)](
+	https://qlty.sh/gh/Alexander-Senko/projects/magic-presenter
 )
 
 A bit of history: this gem was inspired by digging deeper into [Draper](https://github.com/drapergem/draper) with an eye on a refactoring.
