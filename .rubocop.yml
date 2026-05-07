@@ -4,10 +4,12 @@ inherit_from:
   - https://github.com/Alexander-Senko/Alexander-Senko/raw/refs/heads/main/.rubocop-rspec.yml
 
 plugins:
-  - rubocop-rails
-  - rubocop-rspec
   - rubocop-rspec_rails
 
 AllCops:
   Exclude:
     - 'spec/internal/tmp/**/*'
+
+Rails: # HACK: shared configuration gets ignored for some reason
+  Exclude:
+    - 'spec/internal/app/**/*.rb'
