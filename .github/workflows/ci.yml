@@ -24,9 +24,13 @@ on:
       - '*.txt'
       - '**/version.rb'
 
+permissions: read-all
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     env:
       BUNDLE_WITHOUT: test
@@ -58,6 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     name:    Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
     permissions:
+      contents: read
       id-token: write
     strategy:
       matrix:
