@@ -12,9 +12,7 @@ require 'rspec/retry'
 require 'rspec-html-matchers'
 require 'simplecov'
 
-SimpleCov.start do
-	add_filter '/spec/'
-end
+SimpleCov.start
 
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
