@@ -16,6 +16,7 @@ group :test do
 	gem 'rspec-retry'
 	gem 'rspec-rails'
 	gem 'rspec-html-matchers'
+	gem 'magic-support'
 	gem 'ammeter'
 
 	gem 'simplecov', require: false

@@ -6,17 +6,10 @@ module Magic
 	# inferred automatically.
 	module Presentable
 		include Decoratable
-
-		class << self
-			def classes
-				Magic.eager_load :models
-
-				super
-			end
-		end
+		include Lookup::Scope[:model]
 
 		private
 
-		def decorator_base = Presenter
+		def decorator_base = Presenter::Base
 	end
 end

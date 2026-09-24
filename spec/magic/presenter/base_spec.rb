@@ -24,7 +24,7 @@ module Magic
 					subject { AgentPresenter }
 
 					it { expect { subject.call }.to raise_error Lookup::Error }
-					it { expect { subject.call }.to raise_error "multiple model classes found for #{receiver}" }
+					it { expect { subject.call }.to raise_error "multiple Magic::Presentable classes found for #{receiver}" }
 
 					context 'when one can be guessed by name' do
 						subject { Presenter.for ApplicationRecord }
@@ -36,8 +36,7 @@ module Magic
 				context 'when presenting no models' do
 					subject { stub_const 'AbstractPresenter', Class.new(ApplicationPresenter) }
 
-					it { expect { subject.call }.to raise_error Lookup::Error }
-					it { expect { subject.call }.to raise_error "no model class found for #{receiver}" }
+					its_result { is_expected.to be_nil }
 				end
 			end
 		end

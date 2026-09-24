@@ -1,3 +1,12 @@
+## [1.2.0] — UNRELEASED
+
+Moved to Magic Lookup 1.0.
+
+### Removed
+
+- Extracted `Magic.eager_load` to Magic Lookup.
+
+
 ## [1.1.1] — 2026-05-05
 
 Works with Ruby 4+ and Rails 8.1.

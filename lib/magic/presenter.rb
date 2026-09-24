@@ -22,17 +22,6 @@ module Magic # :nodoc:
 
 	module_function # TODO: extract to Magic Support
 
-	def eager_load *scopes, engine: Rails.application
-		return if Rails.application.config.eager_load
-
-		scopes
-				.map(&:to_s)
-				.map(&:pluralize)
-				.map { engine.root / 'app' / _1 }
-				.select(&:exist?)
-				.each { Rails.autoloaders.main.eager_load_dir _1 }
-	end
-
 	def each_engine(&)
 		Rails.application
 				.then { [ _1, *_1.railties ] }

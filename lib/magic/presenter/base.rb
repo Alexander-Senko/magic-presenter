@@ -24,34 +24,12 @@ module Magic
 							.to_s
 							.delete_suffix('Model')
 							.delete_suffix('Record')
-							.then { "#{_1}Presenter" }
+							.concat('Presenter')
 				end
 
-				def model_class
-					Presentable.classes
-							.select { self.for(_1) == self }
-							.optional do |classes|
-								next unless classes.many?
-
-								classes
-										.select { name_for(_1) == name }
-										.optional { classes if _1.empty? } # lookup failed — return original
-							end
-							.sole
-				rescue Enumerable::SoleItemExpectedError => error
-					raise Lookup::Error, "#{error.message
-							.sub('items', 'model classes')
-							.sub('item',  'model class')
-					} for #{self}"
-				end
+				def model_class = Presentable.for self
 
 				delegate_missing_to :model_class
-
-				def descendants
-					Magic.eager_load :presenters
-
-					super
-				end
 			end
 		end
 	end
