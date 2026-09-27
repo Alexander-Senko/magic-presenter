@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 	spec.email       = Magic::Presenter::Author.emails
 	spec.homepage    = "#{Magic::Presenter::Author.github_url}/#{spec.name}"
 	spec.summary     = 'Presentation layer for Rails models'
-	spec.description = 'Based on Magic Decorator, it’s meant to replace Draper.'
+	spec.description = 'Based on Magic Decorator, it is meant to replace Draper.'
 	spec.license     = 'MIT'
 
 	spec.metadata['homepage_uri']    = spec.homepage

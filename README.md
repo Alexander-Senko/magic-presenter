@@ -22,7 +22,7 @@ Based on [Magic Decorator](
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+Install the gem and add to the application’s Gemfile by executing:
 
 	$ bundle add magic-presenter
 
@@ -70,7 +70,7 @@ A generator can be used to generate a presenter:
 
 	$ bin/rails generate presenter Person
 
-See the help for more info:
+See the help for more information:
 
 	$ bin/rails generate presenter --help
 
@@ -91,7 +91,7 @@ end
 ```
 
 A view context must be set to enable helpers.
-It’s done automagically [wherever possible](#view-context).
+It is done automagically [wherever possible](#view-context).
 However, one can set it explicitly anywhere:
 
 ```ruby
@@ -101,12 +101,12 @@ end
 ```
 
 > [!NOTE]
-> A valid `request` may be needed for URL helpers to get host info.
+> A valid `request` may be needed for URL helpers to get host data.
 
 ## 🧙 Magic
 
 > [!IMPORTANT]
-> It’s based on [Magic Decorator](
+> It is based on [Magic Decorator](
 > 	https://github.com/Alexander-Senko/magic-decorator#magic
 > ), so get familiar with that one as well.
 
@@ -131,7 +131,7 @@ When missing, it further looks for presenters for its ancestor classes, up to `O
 - `MyRecord` → `MyPresenter`
 
 > [!TIP]
-> That’s why `ApplicationPresenter` presents `ApplicationRecord`  alongside all its descendants automagically with no extra code.
+> That is why `ApplicationPresenter` presents `ApplicationRecord`  alongside all its descendants automagically with no extra code.
 
 When in doubt, one can use `Magic::Presenter.name_for`:
 
@@ -215,4 +215,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Magic Presenter project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Alexander-Senko/magic-presenter/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Magic Presenter project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Alexander-Senko/magic-presenter/blob/main/CODE_OF_CONDUCT.md).

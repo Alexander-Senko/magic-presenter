@@ -8,12 +8,10 @@ module Magic
 			# The Magic::Presenter::Helpers::MissingContext exception is
 			# raised when no view context to run helpers in has been set.
 			class MissingContext < RuntimeError
-				def message
-					<<~TEXT
-						missing view context
-						You should set Magic::Presenter.view_context first
-					TEXT
-				end
+				def message = <<~TEXT
+					missing view context
+					You should set Magic::Presenter.view_context first
+				TEXT
 			end
 
 			prepended do

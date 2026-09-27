@@ -29,8 +29,9 @@ This release marks the gem to be stable enough.
 
 - Delegate missing presenter class methods to a model class.
 - An optional `engine:` parameter for `Magic.eager_load`
-  to be used by other engines to make their presenters visible for lookups.
-- `Magic.each_engine` to iterate over all the engines attached.
+	to be used by other engines to make their presenters visible for lookups.
+- `Magic.each_engine`
+	to iterate over all the engines attached.
 
 #### Tests
 
@@ -66,9 +67,12 @@ This release marks the gem to be stable enough.
 ### Added
 
 - Auto decoration in views.
-- Active Job support via implementing Global ID.
-- `Magic::Presenter::Base.model_class` as the inverse of 	`Magic::Presenter::Base.for`.
-- `Magic.eager_load` to eagerly load different class scopes, be them presenters, models or whatever else.
+- Active Job support
+	via implementing Global ID.
+- `Magic::Presenter::Base.model_class`
+	as the inverse of `Magic::Presenter::Base.for`.
+- `Magic.eager_load`
+	to eagerly load different class scopes, be them presenters, models or whatever else.
 
 
 ## [0.2.0] — 2024-10-26
@@ -93,8 +97,10 @@ This release marks the gem to be stable enough.
 
 ### Added
 
-- `Magic::Presenter::Base` — a basic presenter class.
-- `Magic::Presentable` to be included in presentable classes.
+- `Magic::Presenter::Base`
+	— a basic presenter class.
+- `Magic::Presentable`
+	to be included in presentable classes.
 	- `#decorate`,
 	- `#decorate!`,
 	- `#decorated`,
