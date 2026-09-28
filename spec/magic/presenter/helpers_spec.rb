@@ -23,7 +23,11 @@ module Magic
 				shared_examples 'helpers are available' do
 					let(:person) { super().decorated } # for the better `#to_s`
 
-					it { expect(subject.link_to person).to eq %'<a href="/people/#{person.id}">#{person}</a>' }
+					it { expect(subject.link_to person).to eq <<~HTML.strip }
+						<a href="/people/#{person.id}">#{person}</a>
+					HTML
+
+					it { expect { subject.dialog_for person }.to raise_error(NoMethodError) { _1.name == :dialog_for } }
 				end
 
 				shared_context 'with helpers enabled' do
