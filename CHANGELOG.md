@@ -2,6 +2,10 @@
 
 Moved to Magic Lookup 1.0.
 
+### Changed
+
+- Moved to Ruby 3.4+.
+
 ### Removed
 
 - Extracted `Magic.eager_load` to Magic Lookup.

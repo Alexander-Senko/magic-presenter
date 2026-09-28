@@ -35,7 +35,7 @@ ActiveSupport.on_load :action_view do # rubocop:disable Metrics/BlockLength
 			super
 					.each_value
 					.grep(Magic::Presenter::Base)
-					.each { _1.view_context = self }
+					.each { it.view_context = self }
 		end
 	end
 end

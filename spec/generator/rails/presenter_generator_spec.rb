@@ -12,8 +12,8 @@ RSpec.describe Rails::PresenterGenerator do
 	before do
 		(presenter_name.deconstantize.presence&.constantize or Object)
 				.then
-				.select { _1.const_defined? presenter_name.demodulize }
-				.each   { _1.send :remove_const, presenter_name.demodulize } # rubocop:disable RSpec/RemoveConst
+				.select { it.const_defined?      presenter_name.demodulize }
+				.each   { it.send :remove_const, presenter_name.demodulize } # rubocop:disable RSpec/RemoveConst
 
 		load file path
 	rescue LoadError

@@ -6,7 +6,7 @@ module Magic
 			isolate_namespace Magic::Presenter
 
 			config.generators do
-				_1.test_framework = :rspec
+				it.test_framework = :rspec
 			end
 		end
 	end

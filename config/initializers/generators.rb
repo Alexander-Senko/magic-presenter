@@ -14,7 +14,7 @@ if defined? Rails::Generators
 
 	Magic.each_engine do |engine|
 		engine.config.generators do
-			_1.helper = :presenter
+			it.helper = :presenter
 		end
 	end
 end

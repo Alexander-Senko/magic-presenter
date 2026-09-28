@@ -12,7 +12,7 @@ module RSpec
 			include Magic::Presenter::TestCase::Behavior
 
 			included do
-				around { Magic::Presenter.with view_context: self, &_1 }
+				around { Magic::Presenter.with view_context: self, &it }
 			end
 		end
 	end

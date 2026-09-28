@@ -3,12 +3,12 @@
 class CreatePeople < ActiveRecord::Migration[7.2]
 	def change
 		create_table :people do
-			_1.belongs_to :parent, foreign_key: { to_table: _1.name }
+			it.belongs_to :parent, foreign_key: { to_table: it.name }
 
-			_1.string :first_name
-			_1.string :last_name
+			it.string :first_name
+			it.string :last_name
 
-			_1.timestamps
+			it.timestamps
 		end
 	end
 end

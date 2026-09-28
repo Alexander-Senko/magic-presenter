@@ -18,7 +18,7 @@ module Magic
 			context 'with view context' do
 				let(:view_context) { ApplicationController.new.view_context }
 
-				around { Magic::Presenter.with view_context:, &_1 }
+				around { Magic::Presenter.with view_context:, &it }
 
 				shared_examples 'helpers are available' do
 					let(:person) { super().decorated } # for the better `#to_s`
@@ -27,7 +27,7 @@ module Magic
 						<a href="/people/#{person.id}">#{person}</a>
 					HTML
 
-					it { expect { subject.dialog_for person }.to raise_error(NoMethodError) { _1.name == :dialog_for } }
+					it { expect { subject.dialog_for person }.to raise_error(NoMethodError) { it.name == :dialog_for } }
 				end
 
 				shared_context 'with helpers enabled' do

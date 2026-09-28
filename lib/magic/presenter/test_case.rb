@@ -13,7 +13,7 @@ module Magic
 				include ActionView::TestCase::Behavior
 
 				included do
-					Magic.each_engine { include _1.routes.url_helpers }
+					Magic.each_engine { include it.routes.url_helpers }
 				end
 			end
 

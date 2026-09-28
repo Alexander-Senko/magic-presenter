@@ -10,7 +10,7 @@ module Magic
 			def file_name name = super()
 				name
 						.camelize
-						.then { Magic::Presenter.name_for _1 }
+						.then { Magic::Presenter.name_for it }
 						.underscore
 			end
 

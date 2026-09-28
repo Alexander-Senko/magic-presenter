@@ -24,7 +24,7 @@ module Magic # :nodoc:
 
 	def each_engine(&)
 		Rails.application
-				.then { [ _1, *_1.railties ] }
+				.then { [ it, *it.railties ] }
 				.grep(Rails::Engine)
 				.each(&)
 	end
