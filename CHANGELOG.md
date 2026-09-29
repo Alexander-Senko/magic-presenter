@@ -1,4 +1,4 @@
-## [1.2.0] — UNRELEASED
+## [1.2.0] — 2026-09-30
 
 Moved to Magic Lookup 1.0.
 
