@@ -23,7 +23,6 @@ group :test do
 end
 
 group :development do
-	gem 'rubocop',             require: false
 	gem 'rubocop-rails',       require: false
 	gem 'rubocop-rspec',       require: false
 	gem 'rubocop-rspec_rails', require: false
@@ -39,4 +38,8 @@ when 'head'
 	gem 'rails', github: 'rails/rails'
 when /\d+(\.\d+)?/
 	gem 'rails', "~> #{rails_version}.0"
+
+	gem 'json', '~> 2.0' # https://github.com/rails/rails/pull/58601
+when :default
+	gem 'json', '~> 2.0' # HACK: remove with Rails 8.2 released
 end
