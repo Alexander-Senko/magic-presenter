@@ -1,0 +1,3 @@
+[submodule "vendor/gems/rubygems-author"]
+	path = vendor/gems/rubygems-author
+	url = https://github.com/Alexander-Senko/rubygems-author.git

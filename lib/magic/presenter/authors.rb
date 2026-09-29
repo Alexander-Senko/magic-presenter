@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-require 'rubygems/author'
+begin
+	require 'rubygems/author'
+rescue LoadError
+	require_relative '../../../vendor/gems/rubygems-author/lib/rubygems/author'
+end
 
 module Magic
 	module Presenter

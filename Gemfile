@@ -29,6 +29,7 @@ group :development do
 	gem 'brakeman',            require: false
 
 	gem 'rbs'
+	gem 'rubygems-author'
 end
 
 # CI-specific
