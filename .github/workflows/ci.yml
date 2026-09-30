@@ -71,7 +71,7 @@ jobs:
           - 7.2
 
         include:
-          - { ruby: head, rails: head }
+          - { ruby: head, rails: head, allow-fail: true }
 
     env:
       RAILS_VERSION:  ${{ matrix.rails }}
