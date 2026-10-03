@@ -57,6 +57,7 @@ jobs:
       contents: read
       id-token: write
     strategy:
+      fail-fast: false
       matrix:
         ruby:
           - 4.0
