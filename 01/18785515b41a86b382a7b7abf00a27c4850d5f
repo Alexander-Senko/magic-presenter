@@ -1,0 +1,16 @@
+.github/workflows/ci.yml
+  h_3633b6af39cc3f 75
+Gemfile
+  h_3633b6af39cc3f 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0118785515b41a86b382a7b7abf00a27c4850d5f",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
