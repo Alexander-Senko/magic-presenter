@@ -14,7 +14,7 @@ group :test do
 	gem 'rspec'
 	gem 'rspec-its'
 	gem 'rspec-retry'
-	gem 'rspec-rails'
+	gem 'rspec-rails', github: 'rspec/rspec-rails'
 	gem 'rspec-html-matchers'
 	gem 'magic-support', '~> 0.3.0'
 	gem 'ammeter'
