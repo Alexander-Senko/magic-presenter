@@ -1,0 +1,20 @@
+Gemfile
+  h_3633b6af39cc3f 31
+spec/spec_helper.rb
+  h_3633b6af39cc3f 9-10,104-108
+.gitignore
+  h_3633b6af39cc3f 9-11
+rbs_collection.yaml
+  h_3633b6af39cc3f 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3c8d9f18a05b1dc6213fd5b57a6540518bdfee4b",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
