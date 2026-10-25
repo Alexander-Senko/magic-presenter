@@ -35,7 +35,7 @@ RSpec.describe PersonMailer do
 		describe 'text' do
 			subject { super().text_part.body.to_s }
 
-			it { is_expected.to include 'Welcome John Smith!' }
+			it { is_expected.to include 'Welcome, John Smith!' }
 			it { is_expected.to include '* Mathew Johnson' }
 
 			describe 'helpers within a mailer action' do
