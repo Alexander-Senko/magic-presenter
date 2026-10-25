@@ -1,0 +1,47 @@
+app/models/concerns/magic/presentable/collection.rb
+  h_3633b6af39cc3f 1-19
+sig/magic/presentable/collection.rbs
+  s_fe25fc31b61599::t_8e646d34253fba 6-8
+  s_fe25fc31b61599::t_4f5a9fdc795752 3
+  s_fe25fc31b61599::t_c6700318942fb1 1-2
+  s_fe25fc31b61599::t_29f4f4eaf75293 4-5
+  s_fe25fc31b61599::t_1cb0927c53ce28 9-11
+CHANGELOG.md
+  s_fe25fc31b61599::t_429ab752d37c47 7
+  s_fe25fc31b61599::t_d6af9d1e10f27a 9-12
+  h_3633b6af39cc3f 8
+spec/internal/app/views/people/index.html.erb
+  h_3633b6af39cc3f 1-7
+config/initializers/presentable.rb
+  h_3633b6af39cc3f 6-10
+README.md
+  s_fe25fc31b61599::t_fc9290095e0dfd 74
+  h_3633b6af39cc3f 69-73,75-83
+spec/internal/spec/views/people/index.html.erb_spec.rb
+  h_3633b6af39cc3f 1-24
+spec/internal/app/presenters/person_presenter.rb
+  h_3633b6af39cc3f 18-21
+spec/internal/app/controllers/people_controller.rb
+  h_3633b6af39cc3f 4-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "254fa94b2699463e514ec6f322da0273e7bbe32e",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_fe25fc31b61599": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1792926681261",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
