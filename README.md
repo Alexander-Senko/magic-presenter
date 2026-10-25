@@ -64,6 +64,23 @@ When no presenter is found,
 - `#decorate!` raises `Magic::Lookup::Error`,
 - `#decorated` returns the original object.
 
+#### Collections
+
+Active Record relations are presentable as collections. Define a collection presenter inside the matching presenter to customize collection behavior:
+
+```ruby
+class PersonPresenter < Magic::Presenter::Base
+  collection_presenter do
+    def names = map(&:name).to_sentence
+  end
+end
+
+Person.all.decorated.names
+```
+
+Under the hood, `.collection_presenter` defines `PersonPresenter::Collection < Magic::Presenter::Collection` in the above example and evaluates the block within that class’ context. 
+One can also define a collection presenter class explicitly, following the same pattern.
+
 ### Generators
 
 A generator can be used to generate a presenter:

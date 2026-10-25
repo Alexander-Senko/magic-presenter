@@ -4,6 +4,12 @@
 
 - `Magic::Presenter::Collection`
 	— a typed collection presenter class.
+- `Magic::Presentable::Collection`
+	to be included in presentable typed collection classes.
+	- `#decorate`,
+	- `#decorate!`,
+	- `#decorated`,
+	- `#decorated?`.
 
 
 ## [1.2.0] — 2026-09-30

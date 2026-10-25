@@ -15,6 +15,10 @@ class PersonPresenter < AgentPresenter
 		end
 	end
 
+	collection_presenter do
+		def links(...) = map { it.link(...) }
+	end
+
 	def name = "#{first_name} #{last_name}"
 
 	def url = url_for self

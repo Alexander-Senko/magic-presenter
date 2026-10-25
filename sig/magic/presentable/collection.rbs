@@ -1,0 +1,11 @@
+module Magic
+	module Presentable
+		module Collection[unchecked out Element]
+			include Decoratable
+
+			def decorate:  ->  Presenter::Collection[Element]?
+			def decorate!: ->  Presenter::Collection[Element]
+			def decorated: -> (Presenter::Collection[Element] | self)
+		end
+	end
+end
