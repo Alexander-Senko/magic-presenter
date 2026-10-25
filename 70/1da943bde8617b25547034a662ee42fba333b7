@@ -1,7 +1,7 @@
 Gemfile
   s_fe25fc31b61599::t_0d7e7ca295cb67 19
 .rubocop.yml
-  h_3633b6af39cc3f 14-15
+  h_3633b6af39cc3f 13,14-15,16
   h_3633b6af39cc3f 13,16
 ---
 {
