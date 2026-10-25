@@ -18,6 +18,8 @@ module Magic
 			include GlobalID if defined? ::GlobalID
 			prepend Helpers  if defined? ::ActionView
 
+			Collection = Collection # for lookup
+
 			class << self
 				def name_for object_class
 					object_class
@@ -46,11 +48,14 @@ module Magic
 				#
 				#   MyModel.all.count           # =>  42
 				#   MyModel.all.decorated.count # => "42 items"
+				#
+				# It looks for a collection presenter class in ancestor classes
+				# to be inherited from, up to `Magic::Presenter::Collection`.
 				def collection_presenter(&)
 					if const_defined? :Collection, false
 						const_get :Collection
 					else
-						const_set :Collection, Class.new(Collection)
+						const_set :Collection, Class.new(const_get :Collection)
 					end.class_eval(&)
 				end
 			end

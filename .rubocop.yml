@@ -10,6 +10,10 @@ AllCops:
   Exclude:
     - 'spec/internal/tmp/**/*'
 
+# False positives
+Lint/SelfAssignment:
+  Enabled: false
+
 Rails: # HACK: shared configuration gets ignored for some reason
   Exclude:
     - 'spec/internal/app/**/*.rb'

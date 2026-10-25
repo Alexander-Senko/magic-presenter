@@ -57,6 +57,14 @@ module Magic
 				it 'defines a collection presenter class' do
 					expect(subject.call { self }).to be < Collection
 				end
+
+				context 'when inherited' do
+					subject { Class.new PersonPresenter }
+
+					it 'inherits a collection presenter class' do
+						expect(subject.call { self }).to be < PersonPresenter::Collection
+					end
+				end
 			end
 		end
 	end

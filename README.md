@@ -79,6 +79,7 @@ Person.all.decorated.names
 ```
 
 Under the hood, `.collection_presenter` defines `PersonPresenter::Collection < Magic::Presenter::Collection` in the above example and evaluates the block within that class’ context. 
+It looks for a collection presenter class in ancestor classes to be inherited from, up to `Magic::Presenter::Collection`.
 One can also define a collection presenter class explicitly, following the same pattern.
 
 ### Generators
