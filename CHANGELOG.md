@@ -11,6 +11,10 @@
 	- `#decorated`,
 	- `#decorated?`.
 
+### Fixed
+
+- RBS for `Magic::Presentable`: decoration methods return `Magic::Presenter::Base` descendants.
+
 
 ## [1.2.0] — 2026-09-30
 

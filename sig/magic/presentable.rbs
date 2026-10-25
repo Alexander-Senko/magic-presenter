@@ -2,8 +2,8 @@ module Magic
 	module Presentable
 		include Decoratable
 
-		def decorate:  ->  Presenter?
-		def decorate!: ->  Presenter
-		def decorated: -> (Presenter | self)
+		def decorate:  ->  Presenter::Base?
+		def decorate!: ->  Presenter::Base
+		def decorated: -> (Presenter::Base | self)
 	end
 end
