@@ -1,0 +1,14 @@
+README.md
+  h_3633b6af39cc3f 67-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e03600ef9537d4592a332ae2ca8a9cd78e33b535",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
