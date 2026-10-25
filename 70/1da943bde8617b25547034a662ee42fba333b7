@@ -1,0 +1,27 @@
+Gemfile
+  s_fe25fc31b61599::t_0d7e7ca295cb67 19
+.rubocop.yml
+  h_3633b6af39cc3f 14-15
+  h_3633b6af39cc3f 13,16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "701da943bde8617b25547034a662ee42fba333b7",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_fe25fc31b61599": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1792926681261",
+        "model": "unknown"
+      },
+      "human_author": null
+    }
+  }
+}

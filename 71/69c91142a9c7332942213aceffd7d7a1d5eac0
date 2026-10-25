@@ -1,0 +1,18 @@
+spec/internal/app/views/person_mailer/welcome.text.erb
+  h_3633b6af39cc3f 1
+spec/internal/spec/mailers/person_mailer_spec.rb
+  h_3633b6af39cc3f 38
+spec/internal/app/views/person_mailer/welcome.html.erb
+  h_3633b6af39cc3f 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7169c91142a9c7332942213aceffd7d7a1d5eac0",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
