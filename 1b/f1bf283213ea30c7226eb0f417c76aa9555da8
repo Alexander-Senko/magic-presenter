@@ -3,7 +3,7 @@ spec/magic/presenter/collection_spec.rb
 sig/magic/presenter/base.rbs
   h_3633b6af39cc3f 7-10
 lib/magic/presenter.rb
-  h_3633b6af39cc3f 12-13
+  h_3633b6af39cc3f 11,12-13,14-16
   h_3633b6af39cc3f 11,14-16
 lib/magic/presenter/version.rb
   h_3633b6af39cc3f 5
