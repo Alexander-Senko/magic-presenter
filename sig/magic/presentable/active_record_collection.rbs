@@ -1,0 +1,9 @@
+module Magic
+	module Presentable
+		module ActiveRecordCollection[unchecked out Element < ActiveRecord::Base]
+			include Collection[Element]
+
+			def model_class: -> Class
+		end
+	end
+end

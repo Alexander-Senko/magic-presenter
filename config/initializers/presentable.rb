@@ -5,6 +5,5 @@ Rails.application.config.to_prepare do
 end
 
 ActiveSupport.on_load :active_record do
-	ActiveRecord::Relation.include Magic::Presentable::Collection
-	ActiveRecord::Relation.include Module.new { def model_class = model }
+	ActiveRecord::Relation.include Magic::Presentable::ActiveRecordCollection
 end
