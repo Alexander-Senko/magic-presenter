@@ -1,0 +1,15 @@
+spec/magic/presenter/base_spec.rb
+  h_3633b6af39cc3f 43-54
+  h_3633b6af39cc3f 42,55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4358d9af8f9781f54ccfba926f0731062e3f8bb0",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
