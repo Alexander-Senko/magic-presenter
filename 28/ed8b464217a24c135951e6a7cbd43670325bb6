@@ -1,0 +1,30 @@
+Gemfile
+  s_fe25fc31b61599::t_0d7e7ca295cb67 19
+.rubocop.yml
+  h_3633b6af39cc3f 13,14-15,16
+  h_3633b6af39cc3f 13,16
+spec/magic/presenter/base_spec.rb
+  s_fe25fc31b61599::t_35725a54ee2907 3-5
+  h_3633b6af39cc3f 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "28ed8b464217a24c135951e6a7cbd43670325bb6",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_fe25fc31b61599": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1792926681261",
+        "model": "unknown"
+      },
+      "human_author": null
+    }
+  }
+}
