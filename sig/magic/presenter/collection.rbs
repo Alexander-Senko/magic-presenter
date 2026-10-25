@@ -1,0 +1,6 @@
+module Magic
+	module Presenter
+		class Collection[unchecked out Element] < EnumerableDecorator[Element]
+		end
+	end
+end

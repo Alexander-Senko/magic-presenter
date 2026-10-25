@@ -1,3 +1,11 @@
+## [1.3.0] — UNRELEASED
+
+### Added
+
+- `Magic::Presenter::Collection`
+	— a typed collection presenter class.
+
+
 ## [1.2.0] — 2026-09-30
 
 Moved to Magic Lookup 1.0.

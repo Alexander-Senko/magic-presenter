@@ -4,6 +4,10 @@ module Magic
 			extend Lookup
 
 			def self.model_class: () -> Class
+
+			private
+
+			def self.collection_presenter: [T] { [self: Class] -> T } -> T
 		end
 	end
 end

@@ -30,6 +30,29 @@ module Magic
 				def model_class = Presentable.for self
 
 				delegate_missing_to :model_class
+
+				private
+
+				# Define collection presenter from the given block.
+				#
+				#   class MyPresenter < Magic::Presenter::Base
+				#     collection_presenter do
+				#       def count = "#{super} items"
+				#     end
+				#   end
+				#
+				#   class MyModel < ApplicationRecord
+				#   end
+				#
+				#   MyModel.all.count           # =>  42
+				#   MyModel.all.decorated.count # => "42 items"
+				def collection_presenter(&)
+					if const_defined? :Collection, false
+						const_get :Collection
+					else
+						const_set :Collection, Class.new(Collection)
+					end.class_eval(&)
+				end
 			end
 		end
 	end

@@ -8,11 +8,12 @@ require_relative 'presenter/engine'
 module Magic # :nodoc:
 	# Presentation layer for Rails models
 	module Presenter
-		autoload :Base,      'magic/presenter/base'
-		autoload :Helpers,   'magic/presenter/helpers'
-		autoload :GlobalID,  'magic/presenter/global_id'
-		autoload :TestCase,  'magic/presenter/test_case'
-		autoload :Generator, 'generators/magic/presenter/generator'
+		autoload :Base,       'magic/presenter/base'
+		autoload :Collection, 'magic/presenter/collection'
+		autoload :Helpers,    'magic/presenter/helpers'
+		autoload :GlobalID,   'magic/presenter/global_id'
+		autoload :TestCase,   'magic/presenter/test_case'
+		autoload :Generator,  'generators/magic/presenter/generator'
 
 		singleton_class.delegate *%i[
 				for name_for

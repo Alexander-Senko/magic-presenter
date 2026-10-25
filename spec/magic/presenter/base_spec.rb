@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Enhanced nested method chains
+#
+# rubocop:disable Layout/MultilineMethodCallIndentation
+
 module Magic
 	module Presenter
 		RSpec.describe Base do
@@ -37,6 +41,21 @@ module Magic
 					subject { stub_const 'AbstractPresenter', Class.new(ApplicationPresenter) }
 
 					its_result { is_expected.to be_nil }
+				end
+			end
+
+			describe '.collection_presenter' do
+				subject { Class.new described_class }
+
+				it 'defines a collection' do
+					expect { subject.call { self } }
+							.to change { receiver.const_defined? :Collection, false }
+									.from(false)
+									.to true
+				end
+
+				it 'defines a collection presenter class' do
+					expect(subject.call { self }).to be < Collection
 				end
 			end
 		end
