@@ -67,6 +67,9 @@ module Magic
 				it_behaves_like 'with explicit helpers' do
 					shared_examples 'helpers aren’t available' do
 						it { expect { subject.link_to person }.to raise_error Magic::Presenter::Helpers::MissingContext }
+
+						# Checks for missing `#to_a` under the hood
+						it { expect { Array decorated.class }.not_to raise_error }
 					end
 
 					include_context 'with helpers disabled'
@@ -75,6 +78,9 @@ module Magic
 				it_behaves_like 'with implicit helpers' do
 					shared_examples 'helpers aren’t available' do
 						it { expect { subject.link_to person }.to raise_error NoMethodError }
+
+						# Checks for missing `#to_a` under the hood
+						it { expect { Array decorated.class }.not_to raise_error }
 					end
 
 					include_context 'with helpers disabled'

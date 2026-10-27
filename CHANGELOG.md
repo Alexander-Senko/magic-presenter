@@ -13,6 +13,7 @@
 
 ### Fixed
 
+- Helpers: some of missing presenter methods were mistakenly reported as valid, causing `NoMethodError`s.
 - RBS for `Magic::Presentable`: decoration methods return `Magic::Presenter::Base` descendants.
 
 

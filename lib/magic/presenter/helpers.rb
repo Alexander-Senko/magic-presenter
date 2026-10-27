@@ -44,7 +44,8 @@ module Magic
 
 			def respond_to_missing?(method, ...)
 				super or
-						(helpers if view_context).respond_to?(method, ...)
+						(helpers if view_context)
+								&.respond_to?(method, ...) # rubocop:disable Lint/RedundantSafeNavigation
 			end
 		end
 	end
