@@ -1,0 +1,41 @@
+spec/magic/presenter/collection_spec.rb
+  h_3633b6af39cc3f 10,20,23,34
+  s_fe25fc31b61599::t_738a0dc22de752 25
+  s_fe25fc31b61599::t_cca28d752a4701 30-33,35
+  s_fe25fc31b61599::t_b11e876557fca4 21
+  s_fe25fc31b61599::t_f67ae36f5c773d 19
+  s_fe25fc31b61599::t_572d2d63c883b0 24
+  s_fe25fc31b61599::t_42e41c73c31631 6
+  s_fe25fc31b61599::t_1fb97be39d990d 22
+  s_fe25fc31b61599::t_646277fcca0092 29
+  s_fe25fc31b61599::t_08548a3d6df477 18
+  s_fe25fc31b61599::t_6e9c73f16a9adb 26-28
+  s_fe25fc31b61599::t_d150116afd0e04 36-37
+  h_3633b6af39cc3f 10
+lib/magic/presenter/collection.rb
+  s_fe25fc31b61599::t_91e172744c8968 26
+  h_3633b6af39cc3f 27-28,30
+  s_fe25fc31b61599::t_c98548bf77ff9e 29
+  s_fe25fc31b61599::t_9211986d4dd077 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "088764973ea7db23e2cc45f231278e4e0d0cea7a",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_fe25fc31b61599": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1792926681261",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
