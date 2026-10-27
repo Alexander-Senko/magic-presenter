@@ -1,6 +1,8 @@
 module Magic
 	module Presenter
 		class Collection[unchecked out Element] < EnumerableDecorator[Element]
+			def item_presenter: -> Class?
+			def model_class:    -> Class?
 		end
 	end
 end

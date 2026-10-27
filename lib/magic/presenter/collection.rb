@@ -24,6 +24,12 @@ module Magic
 						.concat('::Collection')
 			end
 
+			def item_presenter = model_class
+					&.then { Presenter.for it }
+
+			def model_class = __getobj__
+					.try :model_class
+
 			def to_a(...) = self.class.new super
 		end
 	end
