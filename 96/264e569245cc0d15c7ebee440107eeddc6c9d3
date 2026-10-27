@@ -2,7 +2,7 @@ CHANGELOG.md
   h_3633b6af39cc3f 16
 spec/magic/presenter/helpers_spec.rb
   s_fe25fc31b61599::t_4fc8b0ffa0188c 83
-  h_3633b6af39cc3f 70,81
+  h_3633b6af39cc3f 70,81,82
   s_fe25fc31b61599::t_2415fd6c7a7a4e 71
   s_fe25fc31b61599::t_fbe5f29f6fe727 72
   h_3633b6af39cc3f 82
