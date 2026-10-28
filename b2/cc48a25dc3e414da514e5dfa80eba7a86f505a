@@ -1,0 +1,16 @@
+CHANGELOG.md
+  h_3633b6af39cc3f 1
+lib/magic/presenter/version.rb
+  h_3633b6af39cc3f 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b2cc48a25dc3e414da514e5dfa80eba7a86f505a",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
