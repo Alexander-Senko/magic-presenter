@@ -1,0 +1,38 @@
+CHANGELOG.md
+  s_4ef8ef590f53b5::t_e27db4d8db8ecc 1
+  s_4ef8ef590f53b5::t_860d513f64005d 4
+  s_4ef8ef590f53b5::t_64386050a313bc 7
+  s_4ef8ef590f53b5::t_c6a4c22fdf7f1f 5-6
+  s_4ef8ef590f53b5::t_d547d9d60bb113 2-3,8
+README.md
+  s_4ef8ef590f53b5::t_a29252626f30a6 96-121,123-124
+  s_4ef8ef590f53b5::t_a708974e194396 122
+lib/magic/decorator/version.rb
+  s_4ef8ef590f53b5::t_5d62508742072e 5
+spec/magic/decorator/core_ext/module_spec.rb
+  s_4ef8ef590f53b5::t_045d488589f39a 8
+  s_4ef8ef590f53b5::t_d8c8d8b53771dd 7
+  s_4ef8ef590f53b5::t_4edcadf40d7306 4-6
+  s_4ef8ef590f53b5::t_4ff50a5c6eb09b 9-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "23743d44eb62e838e64fee48c063dd4b08a8cbef",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_4ef8ef590f53b5": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793091834678",
+        "model": "unknown"
+      },
+      "human_author": null
+    }
+  }
+}
