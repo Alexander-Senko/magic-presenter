@@ -1,0 +1,94 @@
+spec/magic/presenter/collection_spec.rb
+  h_3633b6af39cc3f 9,22,25,35
+  s_fe25fc31b61599::t_738a0dc22de752 28
+  s_fe25fc31b61599::t_cca28d752a4701 33,36
+  s_fe25fc31b61599::t_572d2d63c883b0 27
+  s_fe25fc31b61599::t_42e41c73c31631 6
+  s_fe25fc31b61599::t_646277fcca0092 32
+  s_fe25fc31b61599::t_6e9c73f16a9adb 29-30
+  s_fe25fc31b61599::t_d150116afd0e04 37-38
+  h_3633b6af39cc3f 9
+lib/magic/presenter/collection.rb
+  s_fe25fc31b61599::t_91e172744c8968 26
+  h_3633b6af39cc3f 27-28,30
+  s_fe25fc31b61599::t_c98548bf77ff9e 29
+  s_fe25fc31b61599::t_9211986d4dd077 25
+CHANGELOG.md
+  h_3633b6af39cc3f 13,17
+spec/magic/presenter/helpers_spec.rb
+  s_fe25fc31b61599::t_4fc8b0ffa0188c 83
+  h_3633b6af39cc3f 70,81,82
+  s_fe25fc31b61599::t_2415fd6c7a7a4e 71
+  s_fe25fc31b61599::t_fbe5f29f6fe727 72
+  h_3633b6af39cc3f 82
+lib/magic/presenter/helpers.rb
+  s_fe25fc31b61599::t_54ccf15027ad81 47
+  h_3633b6af39cc3f 48
+spec/magic/presenter/base_spec.rb
+  s_4ef8ef590f53b5::t_eeaef61876fa78 53
+spec/internal/spec/views/people/show.html.erb_spec.rb
+  s_cb6e488b2e5b09::t_28b930d40db2fb 34
+  h_3633b6af39cc3f 35-36
+spec/internal/app/controllers/application_controller.rb
+  h_3633b6af39cc3f 8-9
+README.md
+  h_3633b6af39cc3f 131-132,172
+magic-presenter.gemspec
+  h_3633b6af39cc3f 27
+spec/internal/app/views/layouts/application.html.erb
+  h_3633b6af39cc3f 4,7,11,13,16,20,24,26-31,33-38,40-42,44,48
+  s_cb6e488b2e5b09::t_1202a316558607 39
+  s_cb6e488b2e5b09::t_f5d12df9510b17 22
+  s_cb6e488b2e5b09::t_e95c74170697de 47
+  s_cb6e488b2e5b09::t_b4e2f763bbf562 32
+  s_cb6e488b2e5b09::t_8a84f8d53ceab2 46
+  h_3633b6af39cc3f 1-3,5-6,8-10,12,14-15,17-19,21,23,25,43,45,49-50
+config/initializers/action_view.rb
+  s_4ef8ef590f53b5::t_bfe63e766a67c5 26
+  h_3633b6af39cc3f 25,27-34
+spec/internal/app/views/people/show.html.erb
+  h_3633b6af39cc3f 2,4,10,15,19,22
+  h_3633b6af39cc3f 1,3,5
+spec/internal/spec/controllers/people_controller_spec.rb
+  h_3633b6af39cc3f 23-25,28
+  s_cb6e488b2e5b09::t_b04fa17e9ee591 19,21-22,26
+  s_cb6e488b2e5b09::t_30c28fbafbd021 27
+  h_3633b6af39cc3f 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1d02163f5d789bea382ffb41cd8d9f0bfd2c8acc",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_4ef8ef590f53b5": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793091834678",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    },
+    "s_cb6e488b2e5b09": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793180125015",
+        "model": "unknown"
+      },
+      "human_author": null
+    },
+    "s_fe25fc31b61599": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1792926681261",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
