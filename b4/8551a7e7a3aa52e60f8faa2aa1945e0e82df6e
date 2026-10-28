@@ -1,0 +1,25 @@
+.github/workflows/ci.yml
+  s_cb6e488b2e5b09::t_22a9427b1f3832 74-76
+  s_cb6e488b2e5b09::t_584e89e948807a 77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b48551a7e7a3aa52e60f8faa2aa1945e0e82df6e",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_cb6e488b2e5b09": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793180125015",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
