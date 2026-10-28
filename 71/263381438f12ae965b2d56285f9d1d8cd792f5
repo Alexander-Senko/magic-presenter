@@ -8,7 +8,7 @@ README.md
 magic-presenter.gemspec
   h_3633b6af39cc3f 27
 spec/internal/app/views/layouts/application.html.erb
-  h_3633b6af39cc3f 4,7,11,13,16,20,24,26-31,33-38,40-42,44,48
+  h_3633b6af39cc3f 1-3,4,5-6,7,8-10,11,12,13,14-15,16,17-19,20,21,23,24,25,26-31,33-38,40-42,43,44,45,48,49-50
   s_cb6e488b2e5b09::t_1202a316558607 39
   s_cb6e488b2e5b09::t_f5d12df9510b17 22
   s_cb6e488b2e5b09::t_e95c74170697de 47
@@ -21,10 +21,10 @@ config/initializers/action_view.rb
 CHANGELOG.md
   h_3633b6af39cc3f 13
 spec/internal/app/views/people/show.html.erb
-  h_3633b6af39cc3f 2,4,10,15,19,22
+  h_3633b6af39cc3f 1,2,3,4,5,10,15,19,22
   h_3633b6af39cc3f 1,3,5
 spec/internal/spec/controllers/people_controller_spec.rb
-  h_3633b6af39cc3f 23-25,28
+  h_3633b6af39cc3f 23-25,28,29
   s_cb6e488b2e5b09::t_b04fa17e9ee591 19,21-22,26
   s_cb6e488b2e5b09::t_30c28fbafbd021 27
   h_3633b6af39cc3f 29
