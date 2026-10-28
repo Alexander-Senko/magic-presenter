@@ -14,4 +14,6 @@ module Magic
 
 		def decorator_base = Presenter::Base
 	end
+
+	ActiveSupport.run_load_hooks :presentable, Presentable
 end

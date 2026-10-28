@@ -4,12 +4,16 @@
 #
 # rubocop:disable Layout/MultilineMethodCallIndentation
 
+require 'support/load_hook'
+
 module Magic
 	module Presenter
 		RSpec.describe Base do
 			subject { described_class.new object }
 
 			let(:object) { 2.times.map { rand } }
+
+			it_behaves_like 'with load hook', :presenter
 
 			describe '.name_for' do
 				its_result('MyObject') { is_expected.to eq 'MyObjectPresenter' }

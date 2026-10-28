@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'support/load_hook'
+
 module Magic
 	RSpec.describe Presentable do
 		subject { object }
@@ -10,6 +12,8 @@ module Magic
 
 		before { GC.start } # purge removed classes
 		after  { Presenter::Base.clear_memery_cache! }
+
+		it_behaves_like 'with load hook', :presentable
 
 		shared_context :model do
 			metadata[:retry] = 9 # FIXME

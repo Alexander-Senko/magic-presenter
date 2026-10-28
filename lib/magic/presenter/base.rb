@@ -60,5 +60,7 @@ module Magic
 				end
 			end
 		end
+
+		ActiveSupport.run_load_hooks :presenter, Base
 	end
 end

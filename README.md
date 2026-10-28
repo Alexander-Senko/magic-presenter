@@ -55,6 +55,8 @@ person = Person.new(first_name: 'John', last_name: 'Smith').decorate
 person.name # => "John Smith"
 ```
 
+Use [load hooks](#load-hooks) to extend the base presenter functionality.
+
 ### `Magic::Presentable`
 
 This module includes `Magic::Decoratable` and allows a descendant to be decorated by presenters only.
@@ -63,6 +65,8 @@ When no presenter is found,
 - `#decorate`  returns `nil`,
 - `#decorate!` raises `Magic::Lookup::Error`,
 - `#decorated` returns the original object.
+
+Use [load hooks](#load-hooks) to extend the functionality.
 
 #### Collections
 
@@ -120,6 +124,25 @@ end
 
 > [!NOTE]
 > A valid `request` may be needed for URL helpers to get host data.
+
+### Load hooks
+
+Load hooks are triggered when `Magic::Presenter::Base` or `Magic::Presentable` are loaded.
+They allow you to run custom initialization code for configuration or to extend the functionality.
+
+```ruby
+ActiveSupport.on_load :presenter do
+  # Put the code to be executed when Magic::Presenter is loaded here.
+  # It runs in the context of Magic::Presenter::Base class.
+end
+```
+
+```ruby
+ActiveSupport.on_load :presentable do
+  # Put the code to be executed when Magic::Presentable is loaded here.
+  # It runs in the context of Magic::Presentable module.
+end
+```
 
 ## 🧙 Magic
 

@@ -1,3 +1,14 @@
+## [1.4.0] — UNRELEASED
+
+### Added
+
+- Load hooks:
+	- `:presenter`
+	  (in the context of `Magic::Presenter::Base`),
+	- `:presentable`
+	  (in the context of `Magic::Presentable`).
+
+
 ## [1.3.0] — 2026-10-28
 
 ### Added
