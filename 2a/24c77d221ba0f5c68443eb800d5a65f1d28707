@@ -1,0 +1,25 @@
+CHANGELOG.md
+  s_4ef8ef590f53b5::t_c6a4c22fdf7f1f 5-6
+  s_4ef8ef590f53b5::t_d547d9d60bb113 2-3,8
+  s_4ef8ef590f53b5::t_e27db4d8db8ecc 1
+  s_4ef8ef590f53b5::t_860d513f64005d 4
+  s_4ef8ef590f53b5::t_64386050a313bc 7
+README.md
+  s_4ef8ef590f53b5::t_a29252626f30a6 96-124
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2a24c77d221ba0f5c68443eb800d5a65f1d28707",
+  "prompts": {},
+  "sessions": {
+    "s_4ef8ef590f53b5": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793091834678",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}

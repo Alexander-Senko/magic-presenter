@@ -1,0 +1,28 @@
+CHANGELOG.md
+  h_3633b6af39cc3f 2,4-5
+  s_cb6e488b2e5b09::t_45fc4839f37e9a 3
+  h_3633b6af39cc3f 1,6-7
+lib/magic/decorator/version.rb
+  s_cb6e488b2e5b09::t_5361c5517ef527 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d1d94baa1ebbbacdfc815c20817d12b605350659",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_cb6e488b2e5b09": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793180125015",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
