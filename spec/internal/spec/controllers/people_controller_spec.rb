@@ -16,8 +16,16 @@ RSpec.describe PeopleController do
 	end
 
 	describe 'GET /show' do
-		before { get :show, params: { id: } }
+		render_views
 
-		it { is_expected.to have_http_status :ok }
+		include RSpecHtmlMatchers
+
+		subject { response.body }
+
+		let(:session) { { user: person } }
+
+		before { get :show, params: { id: }, session: }
+
+		it { is_expected.to have_tag '.current.user a', href: person_path(person), text: 'John Smith' }
 	end
 end

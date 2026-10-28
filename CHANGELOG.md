@@ -10,6 +10,7 @@
 	- `#decorate!`,
 	- `#decorated`,
 	- `#decorated?`.
+- Automatic decoration of controller helper methods in views.
 
 ### Fixed
 

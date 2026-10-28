@@ -31,7 +31,9 @@ RSpec.describe 'people/show' do
 		end
 
 		describe 'class-level' do
-			it { is_expected.to have_tag 'nav a', href: people_path, text: 'All' }
+			subject { view.content_for :links }
+
+			it { is_expected.to have_tag 'a', href: people_path, text: 'All' }
 		end
 	end
 end

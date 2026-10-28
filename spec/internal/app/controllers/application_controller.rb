@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
 		super or
 				ActionDispatch::TestRequest.create
 	end
+
+	helper_method def current_user = session[:user]
 end

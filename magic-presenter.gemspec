@@ -24,6 +24,6 @@ Gem::Specification.new do |spec|
 	spec.required_ruby_version = '>= 3.4'
 
 	spec.add_dependency 'rails', '>= 7.2', '< 9'
-	spec.add_dependency 'magic-decorator', '~> 1.0'
+	spec.add_dependency 'magic-decorator', '~> 1.2'
 	spec.add_dependency 'magic-lookup',    '~> 1.0'
 end

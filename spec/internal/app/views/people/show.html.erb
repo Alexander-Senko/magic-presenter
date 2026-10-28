@@ -1,25 +1,23 @@
-<nav>
-	<ul>
-		<% for link in @person.class.links do %>
-			<li><%= link %></li>
-		<% end %>
-	</ul>
-</nav>
+<%- content_for :links do -%>
+	<%- for link in @person.class.links do -%>
+		<li><%= link %></li>
+	<%- end -%>
+<%- end -%>
 
 <article class="person">
 	<h1 class="name"><%= @person.name %></h1>
 
-	<% if defined? family %>
+	<%- if defined? family -%>
 		<section class="family">
 			<h2>Family</h2>
 
 			<ul class="people">
-				<% for person in family do %>
+				<%- for person in family do -%>
 					<li class="person">
 						<%= render person %>
 					</li>
-				<% end %>
+				<%- end -%>
 			</ul>
 		</section>
-	<% end %>
+	<%- end -%>
 </article>

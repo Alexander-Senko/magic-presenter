@@ -22,6 +22,16 @@ ActiveSupport.on_load :action_view do # rubocop:disable Metrics/BlockLength
 		end
 	end
 
+	concerning :DecoratedHelpers, prepend: true do
+		require 'magic/decorator/core_ext/module'
+
+		def assign_controller controller
+			super
+
+			self.class.decorated_method controller._helper_methods
+		end
+	end
+
 	concerning :PresenterContext, prepend: true do
 		def in_rendering_context(...)
 			Magic::Presenter.with view_context: self do

@@ -128,6 +128,8 @@ end
 > 	https://github.com/Alexander-Senko/magic-decorator#magic
 > ), so get familiar with that one as well.
 
+In short, the phylosophy is: _**define presenters you need and expect them to be applied automagically to all the corresponding objects** in every appropriate (view) context_.
+
 ### Presentable scope
 
 `Magic::Presentable` is mixed into `ActiveModel::API` by default.
@@ -167,6 +169,7 @@ Missing class methods of a presenter are delegated to a matching model class if 
 > [!NOTE]
 > Every object passed to views is decorated automagically.
 > This involves both implicit instance variables and `locals` passed explicitly.
+> Controller helper methods are also decorated when called from views.
 
 ### Helpers
 
