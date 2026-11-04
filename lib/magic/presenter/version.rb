@@ -2,6 +2,6 @@
 
 module Magic
 	module Presenter
-		VERSION = '1.4.0.alpha'
+		VERSION = '1.4.0'
 	end
 end
