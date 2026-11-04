@@ -1,0 +1,18 @@
+.rubocop.yml
+  h_3633b6af39cc3f 13-18
+lib/magic/presenter.rb
+  h_3633b6af39cc3f 8
+lib/magic/presenter/engine.rb
+  h_3633b6af39cc3f 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "567ae19a81cce55ee0809a0622398628b7471652",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
