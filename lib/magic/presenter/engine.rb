@@ -2,7 +2,7 @@
 
 module Magic
 	module Presenter
-		class Engine < ::Rails::Engine # :nodoc:
+		class Engine < ::Rails::Engine
 			isolate_namespace Magic::Presenter
 
 			config.generators do

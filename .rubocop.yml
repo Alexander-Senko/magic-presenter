@@ -10,6 +10,12 @@ AllCops:
   Exclude:
     - 'spec/internal/tmp/**/*'
 
+Style/Documentation:
+  AllowedConstants:
+    - Magic
+    - Presenter
+    - Engine
+
 # False positives
 Lint/SelfAssignment:
   Enabled: false
