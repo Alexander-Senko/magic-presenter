@@ -1,0 +1,21 @@
+CHANGELOG.md
+  s_c2ec1da0cdfbaf::t_1881ba87456bc4 1-7
+lib/magic/presenter/version.rb
+  s_c2ec1da0cdfbaf::t_165de9ab37ee1d 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bf462b9e16706554925c89813be42e989a753275",
+  "prompts": {},
+  "sessions": {
+    "s_c2ec1da0cdfbaf": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793748663508",
+        "model": "unknown"
+      },
+      "human_author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  }
+}
