@@ -1,0 +1,63 @@
+CHANGELOG.md
+  s_cb6e488b2e5b09::t_c96966de39a5f0 1-5,10-11
+  s_c2ec1da0cdfbaf::t_26146351a1e6b2 7
+  s_c2ec1da0cdfbaf::t_cf9400d73e1a7b 9
+  s_c2ec1da0cdfbaf::t_6873865a810fd4 6,8
+lib/magic/presenter/version.rb
+  s_cb6e488b2e5b09::t_13f6da6cc22ba7 5
+README.md
+  s_c2ec1da0cdfbaf::t_e5436ca13e4842 142-143
+  s_c2ec1da0cdfbaf::t_549196a8f9bcd1 141
+  s_c2ec1da0cdfbaf::t_3f85e35867daee 129
+  s_c2ec1da0cdfbaf::t_74102ea6d85f2e 130
+  s_c2ec1da0cdfbaf::t_78e649db249c92 58
+  h_3633b6af39cc3f 59,69-70,131-135,137-140,144-146
+  s_c2ec1da0cdfbaf::t_95183e1be94f66 128
+  s_c2ec1da0cdfbaf::t_1772c78b4626f6 136
+spec/magic/presenter/base_spec.rb
+  s_c2ec1da0cdfbaf::t_84050e0e361faf 16
+  s_c2ec1da0cdfbaf::t_9fade53ac0f16a 17
+  h_3633b6af39cc3f 7-8
+lib/magic/presenter/base.rb
+  h_3633b6af39cc3f 64
+  s_c2ec1da0cdfbaf::t_c1ef530c7e9fc0 63
+app/models/concerns/magic/presentable.rb
+  h_3633b6af39cc3f 18
+  s_c2ec1da0cdfbaf::t_a1591c2794d018 17
+spec/magic/presentable_spec.rb
+  s_c2ec1da0cdfbaf::t_17657138e00fc4 3-4
+  h_3633b6af39cc3f 16-17
+spec/support/load_hook.rb
+  s_c2ec1da0cdfbaf::t_c931071bd19b06 4-14,16-17
+  h_3633b6af39cc3f 1-2,15
+  s_c2ec1da0cdfbaf::t_ea8902afbaeb8a 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "19e983d1824eed4c7e2abe60e0371996bff2f1e7",
+  "prompts": {},
+  "humans": {
+    "h_3633b6af39cc3f": {
+      "author": "Alexander Senko <Alexander.Senko@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_c2ec1da0cdfbaf": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793748663508",
+        "model": "unknown"
+      },
+      "human_author": null
+    },
+    "s_cb6e488b2e5b09": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1793180125015",
+        "model": "unknown"
+      },
+      "human_author": null
+    }
+  }
+}
