@@ -1,3 +1,10 @@
+## [1.4.2] — 2026-11-05
+
+### Added
+
+- RBSs missing from the gem.
+
+
 ## [1.4.1] — 2026-11-05
 
 ### Fixed
