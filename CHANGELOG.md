@@ -1,3 +1,10 @@
+## [1.4.1] — 2026-11-05
+
+### Fixed
+
+- Error pages in development: controller-less views got broken in v1.3.
+
+
 ## [1.4.0] — 2026-11-04
 
 ### Added

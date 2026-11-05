@@ -28,7 +28,8 @@ ActiveSupport.on_load :action_view do # rubocop:disable Metrics/BlockLength
 		def assign_controller controller
 			super
 
-			self.class.decorated_method controller._helper_methods
+			self.class.decorated_method controller._helper_methods if
+					controller
 		end
 	end
 
